@@ -1,0 +1,7 @@
+interface:
+  display_name: "PRD Helper"
+  short_description: "Base 需求从想法到云文档 PRD 的阶段化助手"
+  default_prompt: "Use $prd-helper to clarify a Base product idea, choose the right PRD stage, and create a Feishu cloud document after enough information is gathered."
+
+policy:
+  allow_implicit_invocation: true
