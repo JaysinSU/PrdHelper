@@ -1,74 +1,43 @@
 ---
 name: prd-helper
-description: Base-specific product requirement helper and required entrypoint for PRD work. Use when the user wants to clarify a Base product idea, brainstorm demand direction, prepare Smoke Review, Product Draft, Design Draft, or formal PRD materials, create Feishu cloud documents from product requirement content, review an existing Base requirement document, or iteratively upgrade this PRD helper skill from user feedback.
+description: 梳理、起草、评审和迭代飞书多维表格 Base 的产品需求。适用于需求澄清、Smoke Review、Product Draft、Design Draft、PRD、验收和方案变更，尤其是数据追加导入、表或视图描述、新字段类型及跨视图兼容。单纯操作现有表格数据时使用对应的 Base 工具。
 ---
 
-# PRD Helper
+# Base 产品需求助手
 
-## Core Rule
+默认用中文。让读者能判断要解决的用户任务、已选方向、本期行为和如何验收。按用户需要的产物交付。
 
-Act as the required entrypoint for all Base requirement work. Do not jump directly into `smoke`, `draft`, or `prd` output. First route the request, identify missing information, and ask clarifying questions. If required information is missing, do not write the document body; provide only the needed questions and a concise reason.
+## 先判断任务
 
-Use Chinese by default. Keep the style concise, decision-oriented, and suitable for Base collaborators.
+| 请求 | 先读 | 交付 |
+| --- | --- | --- |
+| 想法、取舍、需求澄清 | [方案讨论](references/brainstorm.md) | 推荐方向、关键权衡、需要决策的问题 |
+| Smoke Review | [早期评审](references/smoke.md) | 场景、价值、路径示意及评审议题 |
+| Product Draft 或 Design Draft | [方案草稿](references/draft.md) | 首期范围、流程、页面状态与依赖 |
+| 正式 PRD | [PRD 模板](references/prd.md) | 足以设计、研发和验收的需求 |
+| 评审、评论归纳、方案变更 | [证据与评审](references/evidence-and-review.md) | 有出处的发现、决策和影响范围 |
+| 线稿、画板或配图 | [流程与线稿](references/wireframes.md) | 与实际入口、状态和规则对应的图 |
+| 写入飞书或修订现有文档 | [飞书交付](references/feishu-output.md) | 可核验的正文、资源与章节链接 |
+| 沉淀方法或升级技能 | [维护流程](references/upgrade-process.md) | 可迁移的规则、案例与验证记录 |
 
-## Routing
+按需求再加载对应案例。它们是脱敏后的设计练习，当前能力与发布状态以任务中的证据为准。
 
-1. If the idea is blurry, disputed, or the user asks for blind spots, alternatives, industry-leading ideas, or stronger questions, read `references/brainstorm.md`.
-2. If the goal is early alignment before PRD, read `references/smoke.md`.
-3. If the direction is mostly clear and the user needs product expansion, work estimation, risk exposure, or design/technical parallel input, read `references/draft.md`.
-4. If the scope is ready for implementation review, read `references/prd.md`.
-5. For any deliverable or review, read `references/quality-checklist.md`.
-6. Before creating or updating a Feishu cloud document, read `references/feishu-output.md`.
-7. When the user gives feedback to improve this skill, read `references/upgrade-process.md`.
+- [数据导入](references/data-import.md)覆盖追加与覆盖、字段映射、预览、写入与重试。
+- [对象说明](references/object-metadata.md)覆盖表与视图描述、角色和端、保存与复制。
+- [字段类型](references/field-types.md)覆盖值模型、富文本、转换、展示、分享与权限。
+- [质量与验收](references/quality-checklist.md)用于交付前的重点检查。涉及排期、发布或指标时，同时读其中对应部分。
 
-When the stage is unclear, ask enough questions to choose one stage instead of generating a mixed artifact.
+## 从材料走到决定
 
-## Required Intake
+1. 用一句话写出「谁在什么场景完成什么任务」，再记录现状、期望结果、本期范围和最小可行路径。区分入口、数据来源、操作对象和最终产物。
+2. 优先读取用户给出的现行文档、明确决策及有关实测。将已确认、实测、参考、建议和待定分开记。引用客户证据时，说明它支撑的是哪类对象和场景。跨产品参考按同一能力维度对比，记录实际验证到的步骤。
+3. 只追问会改变方案、结果或权限的缺项。资料可查的先查。讨论新方向时说明推荐及权衡，等实质决策明确后写入正式规则。已有决策或用户明确给定的方案可直接用于起草和修订。
+4. 为关键路径标出用户动作、可见结果和真正生效的时点。将编辑、预览、提交、落库和分享分开。遇到失败要写清已生效的内容、未保存的输入、可恢复位置和下一步。
+5. 按对象、角色、端和入口拆分读、改、复制、分享等操作。只检查受影响的点位。保持用户已确认的功能边界、示意风格、术语和文档结构。
 
-Before drafting any Smoke Review, Draft, or PRD body, confirm these basics:
+## 用可验收的规则交付
 
-- Demand name and one-sentence demand.
-- Target user or scenario.
-- Core problem and why it matters now.
-- Expected benefit: quantitative baseline and target when available; qualitative necessity when this is a new capability.
-- Current state and user/customer signal.
-- Proposed capability boundary: in-scope and out-of-scope.
-- Main user path or key capability chain.
-- Known risks, dependencies, and open questions.
-- Expected output stage: brainstorm, Smoke Review, Product Draft, Design Draft, or PRD.
-
-If any item is unknown, ask targeted questions. Do not hide unknowns inside polished prose.
-
-## Base Defaults
-
-Apply these concerns only when relevant, not mechanically:
-
-- Permissions, sharing, role differences, and operation authority.
-- PC/mobile/iPad/Android/iOS/HarmonyOS differences.
-- Base view types, records, fields, dashboards, forms, automations, workflows, and AI agents.
-- Data scale, large-table performance, and `SV6 按需版本` naming.
-- Historical compatibility, migration, rollback, and gray release.
-- FG, experiment scope, metrics, logging, monitoring, and alerting.
-- Multilingual copy and locale behavior.
-- AI ability boundaries, route rules, refusal states, intermediate states, result types, and cross-end session behavior.
-
-## Output Behavior
-
-- Use challenge-first thinking for brainstorm: identify assumptions, failure modes, missing information, and stakeholder objections before proposing creative options.
-- Keep conclusions and decisions at the front of every artifact.
-- Prefer tables for structured decisions and clear lists for action items.
-- Avoid large raw link dumps; brief referenced documents into the current document.
-- When ready to produce a user-facing artifact, create a Feishu cloud document with the Feishu docs tool if available. If the tool is unavailable, provide Feishu-ready Markdown.
-- Do not create a Feishu document until the required intake for the chosen stage is sufficient or the user explicitly asks for a question-only document.
-
-## Iteration Contract
-
-Treat this skill as versioned working software. When the user gives feedback on the skill:
-
-1. Classify the feedback as routing, questioning, template structure, Base domain knowledge, writing standard, Feishu output, or upgrade workflow.
-2. Update local skill files as needed.
-3. Validate the skill.
-4. Summarize what changed and why.
-5. Ask for explicit confirmation before committing and pushing to git.
-
-Never push to a remote repository without explicit user confirmation in the current conversation.
+- 写明条件、动作、可见结果和持久状态。将字段转换写成具体输入和输出，区分可兼容、有损、冲突和未支持。细节待定时标明需要谁决定以及影响。
+- 方案更新时先列影响清单，包含正文、矩阵、文案、图和验收。使用最新版本定位局部修改。涉及编号、图片、画板或评论锚点时回读确认实际结果。
+- 按用户要求选择聊天、本地稿、云文档或图。正式飞书 PRD 在工具和授权可用时落到指定文档。只读分析与审核可在聊天完成。工具受限时如实说明并交付可继续使用的稿件。
+- 将完成、验证和待定分开报告。验证范围要与实际证据一致。

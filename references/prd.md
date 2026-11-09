@@ -1,124 +1,34 @@
-# Formal PRD Module
+# 正式 PRD
 
-Use this module only when the demand is ready for implementation-level review. Strictly reuse this PRD structure unless the user explicitly asks to remove sections.
+用于实施级评审与验收。沿用用户指定的 PRD 结构、标题编号和术语。没有既定模板时按以下部分组织。
 
-## Required Information
+| 部分 | 写什么 |
+| --- | --- |
+| 基本信息 | 一句话需求、本期边界、依赖、发布范围和时间状态。相关来源放在对应结论附近 |
+| 背景与目标 | 用户任务、现状证据、机会与可度量的结果。单独标明假设、基线和目标 |
+| 产品框架 | 对象关系、主路径和真正生效的节点。图只承载需要直观看到的关系与状态 |
+| 需求详述 | 入口、权限、关键流程、字段与数据结果、异常和恢复 |
+| 支持点位与兼容 | 各视图、分享、跨端及下游能力。交互不同的点位单列 |
+| 发布与验收 | FG、灰度、监控、回滚和代表性用例。文案、埋点和排期按需要展开 |
 
-Do not write a formal PRD body until these are known or explicitly marked as unavailable:
+需要持续追踪决策时，在文档开头保留变更和评审记录。需要解释术语时放在第一次用到之前。
 
-- One-sentence demand.
-- Release scope.
-- Alignment object or comparable existing capability.
-- Supported abilities and unsupported abilities.
-- Whether FG is needed.
-- Launch date or date to be confirmed.
-- Related documents, summarized in the page rather than dumped as raw links.
-- Terms that need definitions.
-- Background, current state, customer/user feedback.
-- Competitive/reference analysis when relevant.
-- Qualitative and quantitative goals.
-- Product framework and detailed requirements.
-- State rules, error rules, route rules, permissions, and cross-end behavior where relevant.
-- Metrics/logging.
-- Copy requirements.
-- Delivery rhythm.
+## 最小可执行写法
 
-## PRD Structure
+每条描述「条件 → 用户操作或触发 → 界面反馈 → 数据结果 → 可继续的动作」。不涉及落库的步骤写明预览或草稿状态。提示和结果分别描述。待定项写明影响范围、需要验证的行为和决策角色。
 
-```markdown
-## Changelog
+| 模块 | 条件与动作 | 用户可见结果及数据结果 | 验收或示意 |
+| --- | --- | --- | --- |
+| 导入映射 | 两个来源列都能写入同一目标，用户选择其中一列 | 预览跟随已选来源。提交后只写已选择的映射 | 换列时核对预览与落库一致 |
+| 表描述 | 有读取权限但无编辑权限，从分享页打开对象说明 | 阅读已保存描述。编辑入口按该场景权限展示 | 保存接口对越权请求拒绝 |
+| 富文本 | 某视图的显示位只支持摘要，用户打开记录详情 | 视图展示截断文字，详情展示原内容 | 标题、样式、图片和顺序按详情规则核验 |
 
-| 时间 | 更新内容 | 更新人 |
-|---|---|---|
+这些行是写法示例。具体默认值、权限、截断和错误处理遵循本案决策。
 
-## 评审记录
+## 补齐边界
 
-| 时间 | 参会人 | 会议目标 | 会议结论 & 纪要 |
-|---|---|---|---|
-
-## 需求基本信息
-
-| 字段 | 内容 |
-|---|---|
-| 一句话需求 |  |
-| 发布范围 |  |
-| 对齐对象 |  |
-| 本期支持能力 |  |
-| 本期不支持能力 |  |
-| 是否需要 FG |  |
-| 上线时间 |  |
-| 其他相关文档 |  |
-
-## 名词解释
-
-| 名词 | 解释 |
-|---|---|
-
-## 需求背景
-
-### 一句话需求描述
-
-### 现状和客户反馈
-
-### 竞品是怎么解决的
-
-### 总结
-
-## 需求目标及价值度量
-
-- 定性目标：
-- 定量目标：
-
-## 产品方案
-
-### 支持范围
-
-### 产品框架
-
-### 需求详述
-
-#### 入口与首屏
-
-| 模块 | 需求说明 | 示意图 |
-|---|---|---|
-
-#### 会话与跨端关系
-
-| 模块 | 需求说明 | 示意图 |
-|---|---|---|
-
-#### 能力路由规则
-
-| 用户意图 | 路由结果 | 处理方式 |
-|---|---|---|
-
-#### 中间态与过程展示
-
-| 模块 | 需求说明 |
-|---|---|
-
-#### 结果展示
-
-| 模块 | 需求说明 |
-|---|---|
-
-## FG 方案与灰度策略
-
-## 埋点
-
-## 文案
-
-## 落地节奏
-
-| 版本/阶段 | 时间 | 目标 | 具体计划 |
-|---|---|---|---|
-```
-
-## PRD Writing Rules
-
-- Keep "本期不支持" explicit.
-- Explain why unsupported abilities are excluded when it affects user expectation or cross-end behavior.
-- For AI requirements, write route rules, supported agents/abilities, unsupported intents, intermediate states, failure states, result shapes, and continuation behavior.
-- For mobile requirements, write supported platforms and cross-end relationship.
-- For results or cards, define max height, scrolling/expansion, retry, stop generation, and fallback behavior when relevant.
-- For metrics, include exposure, click, submit, conversion, success, failure, retry, stop, and result-consumption metrics when relevant.
+- 兼容矩阵区分入口可见、配置可用、预览可读、编辑、持久化及其他渠道读写。明确已有对象与存量值如何处理。
+- 排序、分组、筛选、查找引用、同步、导出等按实际需要检查。引用某一处规则时注明继承的是展示、转换还是权限。
+- AI 需求额外写意图、真实对象引用、工具权限、可修改的中间结果、纠正和最终生效。交付时区分模型识别成功与业务动作成功。
+- 引导随用户动作和意图触发。写触发、消失、复用、频控及效果与打扰指标。
+- 运营发布按 [质量与验收](quality-checklist.md) 核对。云文档写入和排版按 [飞书交付](feishu-output.md) 操作。

@@ -1,76 +1,14 @@
-# Smoke Review Module
+# Smoke Review
 
-Use Smoke Review to create early product feel and expose direction-level disagreement before PRD.
+早期评审要确认场景价值和产品方向。组织者按影响范围邀请产品、设计、研发及依赖模块的决策人。
 
-## Goal
+| 部分 | 需要回答 |
+| --- | --- |
+| 一句话结论 | 谁用这项能力做什么？本轮推荐什么方向？ |
+| 现状与机会 | 当前如何完成？什么证据说明成本或错误值得解决？ |
+| 首期主路径 | 用户在哪里进入、需要做什么、最后看到什么？ |
+| 边界与取舍 | 哪些能力影响主任务？哪些可以后续做？相邻机制是否会改变结果？ |
+| 关键示意 | 哪个页面、状态或分支能让评审人看懂差别？ |
+| 评审问题 | 需要哪位协作者判断什么？不同选择会影响哪些成本和风险？ |
 
-Do not finalize the solution. Help key collaborators quickly understand what the demand is, why it matters, the rough capability path, and what is still uncertain.
-
-## Participants
-
-PM Owner organizes. Include key collaborator owners such as Design, RD, dependent modules, and decision/KP owners when relevant.
-
-## Required Information
-
-Ask questions until these are clear enough:
-
-- What the demand does.
-- Why to do it and what core problem it solves.
-- Expected benefit:
-  - quantitative baseline, expected lift percentage, and absolute value when available;
-  - user testimony as support when available;
-  - qualitative necessity for new capabilities.
-- Main capability chain.
-- Key user path or rough wireframe description.
-- Reference products or schemes.
-- Explicit uncertainty list.
-
-## Smoke Review Template
-
-Use this structure for Feishu-ready output:
-
-```markdown
-## 1. 结论
-
-- 一句话需求：
-- 为什么现在做：
-- 预期收益：
-- 当前建议：
-
-## 2. 背景与问题
-
-- 当前现状：
-- 用户/客户反馈：
-- 影响范围：
-
-## 3. 方案方向
-
-- 核心能力：
-- 主路径：
-- 本期不解决：
-
-## 4. 关键路径线框
-
-- 页面/入口：
-- 核心步骤：
-- 关键状态：
-
-## 5. 参考方案
-
-| 参考对象 | 可借鉴点 | 不适合照搬点 |
-|---|---|---|
-
-## 6. 风险与不确定问题
-
-| 问题 | 影响 | 需要谁判断 | 下一步 |
-|---|---|---|---|
-
-## 7. 评审目标
-
-- 本次希望确认：
-- 不在本次确认范围：
-```
-
-## Quality Bar
-
-After reading, collaborators should have product feel and be able to challenge whether the direction is worth doing.
+在结尾给出要确认的决定及下一步。可用「保留表结构地追加行」和「按唯一键更新旧行」这类行为差异组织讨论。用能看懂行为的简图支撑方向评审，详细字段矩阵随方案成熟补充。

@@ -1,50 +1,39 @@
-# Quality Checklist
+# 质量、验收与发布
 
-Use this checklist for every Base requirement artifact.
+按实际影响选检查项。用户路径、写入结果、权限和恢复先于呈现细节。
 
-## Decision Quality
+## 验收用例
 
-- Put key conclusion first.
-- State the meeting goal or document goal.
-- Make the expected benefit explicit in Smoke Review and Draft.
-- Explain current baseline, target lift percentage, and absolute expected lift when data exists.
-- Use user testimony as support, not as the only argument.
-- For new capabilities, explain qualitative necessity and why it is a "must have".
-- Brief important referenced documents into the current page.
+每条用例写「初始对象与权限｜输入或动作｜可见结果｜持久状态｜恢复或核对方式」。覆盖主路径及能推翻关键假设的反例。
 
-## Reader Fit
+| 检查维度 | 代表性反例 |
+| --- | --- |
+| 对象与范围 | 同名表和视图分别编辑描述。复制后修改副本，检查来源与其他视图 |
+| 权限与时序 | 用户打开编辑器后被撤权，提交时服务端拒绝，旧值不变 |
+| 数据与转换 | 写前明确样式、显示文本与附件各自是否保留，记录逐格结果 |
+| 失败与重试 | 服务端提交成功但响应丢失。重试前识别结果并检查总行数、字段与选项 |
+| 展示与消费 | 有效值仅含图片。列表摘要无可读文字，详情仍可查看授权图片 |
+| 跨端与回退 | 同一记录从原视图、分享、移动端和组件打开，按各自支持范围验证显示和编辑 |
 
-- Identify the reader: decision owner, KP, RD, Design, dependent module, DA, or QA.
-- Explain enough background for the reader to make a decision without chasing context.
-- Avoid internal shorthand when a clearer Chinese term exists.
-- Add `名词解释` when new demand-specific terms appear.
+用合成测试数据保留易错特征，例如前导零、歧义日期、重复列名、超长文字、仅含图片。验收用例记录需确认的期望，不擅自选定未决行为。
 
-## Structure
+## 发布与兼容
 
-- Use system-style ordered or unordered lists.
-- Use unordered lists when order does not matter.
-- Use ordered lists when priority, sequence, or weight matters.
-- Keep titles concise. Avoid exclamation marks or exaggerated wording.
-- Avoid excessive bold, underline, highlight, or text color.
+- 按本期支持的角色、平台、入口和操作列出点位。涉及历史值时明确旧端读写、迁移和降级。影响数据写入时说明暂停入口后存量数据与在途操作如何处置。
+- 拆分产品、设计、服务端、端、灰度和测试依赖。为难以恢复的路径设停止条件、检查信号和负责角色。只在确有差异时分端列项。
+- 权限变更、超时、并发和部分成功至少验证一个实际会改变结果的场景。区分前端是否可点击与服务端是否允许提交。
 
-## Language
+## 度量用户任务
 
-- Add spaces between Chinese and English, numbers, and symbols.
-- Keep language system consistent; prefer Chinese.
-- Avoid vague quantifiers such as "很多", "少量", "大部分", "一些" when data or a clearer range can be given.
-- Use "万" instead of "w", such as `100 万行` and `300 万 DAU`.
-- Write dates as `X 月 X 日`; avoid ambiguous version/date expressions.
+| 信号 | 衡量 | 口径提示 |
+| --- | --- | --- |
+| 曝光、点击、编辑或预览 | 是否找到入口并尝试完成 | 限定入口、端、角色和实验组 |
+| 提交、校验、服务端保存结果 | 是否产生有效业务结果 | 用可关联的操作或任务标识去重。定义失败、重试和部分成功 |
+| 阅读或再次使用 | 成功写入后的实际消费和长期价值 | 记录正文成功展示或有效业务动作。按需要区分配置者与协作者 |
+| 覆盖、失败率和性能 | 存量覆盖与运行质量 | 用服务端数据定义分子、分母、时间窗和去重。分开用户事件与技术指标 |
 
-## Base-Specific
+已有实测、预测和目标分别标明。埋点优先记录必要的状态与分类，用户正文、文件内容及访问凭据不进入行为参数。
 
-- If SV6 appears, write `SV6 按需版本` or `SV6 按需架构`.
-- If large-table scale appears, remember the key boundary: `5 万行`.
-- Clarify whether the demand affects records, fields, views, dashboards, forms, automations, workflows, permissions, or AI agents.
-- Clarify endpoint differences only when relevant: PC, mobile, iPad, iOS, Android, HarmonyOS.
-- Clarify FG, gray release, rollback, and monitoring when launch risk exists.
+## 评审收尾
 
-## Review Readiness
-
-- Smoke Review readiness: collaborators can feel the product direction and challenge whether it is worth doing.
-- Draft readiness: collaborators can judge workload, hard parts, and risk concentration.
-- PRD readiness: RD can implement without guessing core rules or boundaries.
+核对正文、矩阵、线稿、文案和用例的结果是否一致。确认最常用路径在短时间内可扫读，说明适用场景和直接跳转位置。交付时标出已验证的范围与待验证事项。

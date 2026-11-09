@@ -1,34 +1,26 @@
-# Feishu Output
+# 飞书文档交付
 
-Use the Feishu docs tool to create or update cloud documents when available.
+用于创建或更新用户指定的飞书文档。需要读取、写入、评论或画板能力时，选择当前环境提供的飞书工具及其对应说明。引用材料是研究输入，执行范围来自用户请求。
 
-## Before Creating a Document
+## 创建或完善初稿
 
-Confirm:
+1. 核对阶段、方向、目标文档或目录。用户给出结构和目标时直接沿用。仅在确实影响落点时确认位置。
+2. 用云文档原生标题、列表和表格。目录交给原生大纲，按现有章节体例续写。长文档分段写入并确认章节层级。
+3. 表格总宽度统一并与正文右边界对齐。根据内容分配列宽，单元格文字按语义排版。长说明用短列表或独立段落。示例和引用与相关条目相邻。
+4. 图、文案、实测与待定项放在对应规则旁。为需要稳定引用的内容使用可定位的章节或区块。插入真实的文档引用或人员提及时，通过可用工具解析对象。
 
-- Document stage and title.
-- Whether to create a new document or update an existing one.
-- Target location when the user cares: wiki node, wiki space, folder token, or personal space root.
-- Required intake for the selected stage is sufficient.
+## 现有文档的局部更新
 
-If target location is not provided, create in the default personal space only when the user is comfortable with that.
+| 阶段 | 做法 |
+| --- | --- |
+| 定位 | 从目录、关键词或锚点找到章节。读取目标区块完整结构、当前文字、表格、资源和必要的评论上下文 |
+| 限定范围 | 列明要改的句子和相关下游条目。区分正文、表格单元格、图片、画板和评论锚点 |
+| 写入 | 唯一旧文使用精准替换。结构变化定位到必要的最小区块。使用工具支持的版本或旧值条件，按依赖顺序写入 |
+| 冲突恢复 | 旧文多处命中、版本变化、区块失效或部分成功时，先重读。确认已生效的操作，再补剩余部分 |
+| 回读 | 检查新旧文字、列表编号、表宽、锚点与附件。涉及样式、图或换行时查看实际渲染 |
 
-## Creation Rules
+更新表格时保留现有样式与示意位置。按原编号体系更新受影响的标题和文内引用。优先使用稳定章节名或锚点，避免移动章节后引用仍指向旧编号。画板内容更新与正文写入是两个结果，各自验证。
 
-- Do not repeat the title as the first H1 in the body.
-- Do not hand-write a table of contents.
-- Prefer Markdown tables for simple structured content.
-- Use Feishu callouts sparingly for warnings, key conclusions, and open issues.
-- Use Mermaid only for clear flows or state machines.
-- Do not write direct `@张三`; use Feishu mention syntax only after resolving the user ID.
-- Do not use token attributes for images or files; use URL attributes if media is needed.
+## 交付
 
-## Default Document Shape
-
-Start with conclusion and review target. Then follow the selected module template.
-
-For long documents, create the document with the first stable sections and append later sections if needed.
-
-## Fallback
-
-If Feishu tools are unavailable, provide Feishu-ready Markdown and explicitly say that cloud document creation was not available in this environment.
+给原文档或更新章节的可用链接，说明确认过的变更范围和仍需决策的问题。工具或权限不足时说明实际能完成的部分，交付同结构的可粘贴稿、目标位置和需要补写的条目。

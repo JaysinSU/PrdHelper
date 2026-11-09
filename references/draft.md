@@ -1,105 +1,25 @@
-# Draft Module
+# Product Draft 与 Design Draft
 
-Use Draft when the direction is mostly accepted and non-PM collaborators need enough context to judge workload, difficulty, and risk before formal PRD.
+Product Draft 用于确认机制、范围和实现风险。Design Draft 用于确认页面关系、入口、控件状态和反馈。已有可执行方向时进入对应草稿。
 
-## Product Draft Goal
+## Product Draft
 
-Expand the product deliberately, but do not force completion. The draft must make key functions, main user flow, and key-path wireframes concrete enough for Design and RD to participate early.
+| 部分 | 内容 |
+| --- | --- |
+| 结论 | 主场景、推荐机制和首期边界 |
+| 场景与证据 | 当前路径的成本、受影响的对象、最相关反馈和数据 |
+| 对象与流程 | 输入、目标、主流程、关键分支及生效点 |
+| 能力矩阵 | 对象、角色、端、点位。按本案实际影响选维度 |
+| 风险与依赖 | 可能的有损操作、数据一致性、异常恢复、依赖接口与待决策项 |
+| 验收与分期 | 代表性场景和反例。给分期理由及后续入口如何衔接 |
 
-## Design Draft Goal
+## Design Draft
 
-Start design in parallel after Product Draft is basically established. Focus on key pages, key states, and decision-making interaction questions, not visual polish.
+1. 列主路径的页面关系。每一页写用户进来要完成的动作、已有选项和默认状态。
+2. 对影响结果的状态写触发、按钮和反馈。优先画空态、失败、无权限、部分成功、取消与重试。
+3. 标出组件和约束。已有交互写复用哪一处规则，用户可观察的行为写到可验收。像素、插画或技术实现细节交给对应职责确定。
+4. 给重点页面的线稿和场景编号。示意图规则见 [流程与线稿](wireframes.md)。
 
-## Required Information
+## 提交评审
 
-Ask questions until these are clear enough:
-
-- Key functions, not abstract capability names.
-- Main execution path or user flow.
-- Key-path wireframe or precise page/state description.
-- Expected benefit and current baseline where available.
-- Major dependencies and risks.
-- Which supporting details may be delayed.
-- Which abilities can be split into multiple Draft rounds.
-
-## Product Draft Template
-
-```markdown
-## 1. 结论
-
-- 一句话需求：
-- 当前方案判断：
-- 预期收益：
-- 本轮 Draft 目标：
-
-## 2. 背景与问题
-
-- 当前现状：
-- 用户/客户反馈：
-- 为什么现在需要做：
-
-## 3. 范围与边界
-
-| 类型 | 内容 |
-|---|---|
-| 本期支持 |  |
-| 本期不支持 |  |
-| 可后置 |  |
-| 依赖项 |  |
-
-## 4. 核心功能
-
-| 功能 | 用户价值 | 关键规则 | 风险 |
-|---|---|---|---|
-
-## 5. 主流程
-
-1. 
-2. 
-3. 
-
-## 6. 关键页面与状态
-
-| 页面/状态 | 说明 | 决策问题 |
-|---|---|---|
-
-## 7. 风险与待确认
-
-| 问题 | 影响 | Owner | 下一步 |
-|---|---|---|---|
-
-## 8. 可后置内容
-
-- 埋点：
-- 文案：
-- 监控：
-- 配置项：
-```
-
-## Design Draft Template
-
-```markdown
-## 1. 设计目标
-
-- 需要验证的交互复杂度：
-- 需要暴露的结构性问题：
-
-## 2. 关键页面
-
-| 页面 | 核心信息 | 关键决策 |
-|---|---|---|
-
-## 3. 关键状态
-
-| 状态 | 触发条件 | 用户感知 | 待确认 |
-|---|---|---|---|
-
-## 4. 参考与目标产物
-
-| 参考 | 借鉴点 | 决策帮助 |
-|---|---|---|
-```
-
-## Quality Bar
-
-After reading, collaborators should know roughly how much work there is, where the hard parts are, and where risk is concentrated.
+让协作者在阅读后能判断工作量、设计分歧和最先要验证的风险。若产品机制仍有会改变结果的选项，先列明推荐与待确认问题。对已有共识的章节可以先推进。

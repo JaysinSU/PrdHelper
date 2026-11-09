@@ -1,42 +1,11 @@
-# Upgrade Process
+# 维护技能
 
-Use this module when the user gives feedback about this skill or asks to improve it.
+将重复出现且会改变决策的经验写入技能。主入口保留任务路由和必要规则，细节放在按需加载的参考。
 
-## Feedback Classification
+1. 找出反馈涉及的层次，例如提问、证据、值语义、权限、正文、图或验证。
+2. 回到有代表性的实际任务。记录旧做法、失败表现、用户修正和可观察结果。区分长期偏好、场景规则与实现状态。
+3. 把通用方法与案例示例分开。保留能够复现实质差异的合成输入，去除内部链接、人员信息、私有附件、真实数据和凭据。
+4. 核查主入口能指向每份参考，避免同一规则在多处有冲突版本。用一两个自然的用户请求检验路由、关键结论与结果边界。
+5. 验证 frontmatter、引用和新加资源。在用户已授权的仓库及范围内提交对应文件，确认远端实际可读取。对外发布前核对受众与资料范围。
 
-Classify each feedback item into one or more buckets:
-
-- Routing: wrong stage selection or missing total-entry behavior.
-- Questioning: asked too many, too few, or low-quality clarifying questions.
-- Brainstorm: failed to challenge first, missed blind spots, or weak creative options.
-- Template: missing section, wrong structure, or unclear output shape.
-- Base knowledge: missing Base-specific product concepts or review habits.
-- Writing standard: violated language, formatting, or document quality rules.
-- Feishu output: poor cloud document structure or tool usage.
-- Upgrade workflow: git, validation, summary, commit, or push behavior.
-
-## Upgrade Steps
-
-1. Restate the feedback and classify it.
-2. Decide which files need changes.
-3. Apply local edits.
-4. Run validation.
-5. Optionally run a small forward test with a realistic Base demand prompt.
-6. Summarize:
-   - changed files;
-   - behavior before and after;
-   - validation result;
-   - remaining risk.
-7. Ask for explicit confirmation before git commit and push.
-
-## Git Rules
-
-- Keep the skill in a git repository.
-- Do not commit or push unrelated changes.
-- Do not push without a remote URL, branch, network permission, and explicit user confirmation.
-- Prefer commit messages in this format: `Improve prd-helper <area>`.
-- If the user asks for rollback, use git history carefully and never discard uncommitted user changes without explicit approval.
-
-## No Separate Changelog
-
-Do not create a changelog file by default. Use git history and the final user-facing summary as the upgrade record.
+用 Git 历史记录修改和理由。升级技能时保留现有调用名和用户明确的调用配置，除非用户要求调整。

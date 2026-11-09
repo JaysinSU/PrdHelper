@@ -1,58 +1,19 @@
-# Brainstorm Module
+# 需求澄清与方案讨论
 
-Use this module when the user has an idea, direction, vague problem, or asks for challenge questions, blind spots, alternatives, industry-leading ideas, or ways to improve the conversation.
+用于判断值不值得做、选哪条路，以及现阶段需要谁做决定。
 
-## Operating Mode
+1. 用用户任务开场。问谁在什么时点遇到什么麻烦，当前会用哪条替代路径，完成任务后希望得到什么。
+2. 把目标和实现拆开。汇总明细可能是新增记录，也可能是按业务键更新。一个表出现在用户输入里，也可能只是数据来源。
+3. 优先处理会改变对象、结果和授权的歧义。能用现有文档、样例或只读实测回答的先查。可逆细节可以作明确假设，把不可逆写入、权限或产品策略留给对应决策。
+4. 比较会带来实质不同结果的方向。比较用户成本、错误可发现性、可恢复性、兼容面和实现依赖。每个方案都给一个具体场景跑通。
+5. 给一个推荐和下一步。写清哪些决定已确认，哪些仍需用户或评审人确认。策略讨论在聊天或用户指定载体里完成。
 
-Run brainstorm in this order:
+| 当对话卡住时 | 换成这个问题 |
+| --- | --- |
+| 「都支持一下」 | 哪个任务首期必须走通？其余入口的缺失是否影响这个任务？ |
+| 「参考现有能力」 | 要复用的是入口、展示、值语义、权限，还是完整路径？ |
+| 「直接处理更快」 | 无需确认的充分条件是什么？遇到歧义或会丢内容时，用户在哪里纠正？ |
+| 「跟竞品一样」 | 已观察到哪个角色、哪个端和哪些步骤？用户的相同任务具体是什么？ |
+| 「先做个引导」 | 哪个动作表示用户此时需要帮助？出现在哪个决策点？如何关闭、避免重复打扰？ |
 
-1. Restate the current idea in one sentence and name the assumptions being made.
-2. Challenge first:
-   - What could make this fail in 3 months?
-   - What is the biggest unproven assumption?
-   - What stakeholder would object, and why?
-   - What is the most likely hidden dependency?
-   - What user segment may not benefit?
-   - What data would change the decision?
-3. Find omissions:
-   - Missing user scenario.
-   - Missing current baseline.
-   - Missing expected benefit.
-   - Missing ability boundary.
-   - Missing non-goal.
-   - Missing cross-end, permission, performance, or gray-release consideration.
-4. Create options:
-   - Conservative option: smaller scope, faster validation.
-   - Standard option: balanced value and cost.
-   - Industry-leading option: stronger differentiation, higher uncertainty.
-5. Converge:
-   - Recommend the next best stage: Smoke Review, Draft, Design Draft, or PRD.
-   - Ask the fewest questions needed to enter that stage.
-
-## High-Quality Question Bank
-
-Use these questions directly when helpful:
-
-- 如果让你主动添加一项行业领先的功能，你会选什么？
-- 如果这个方案 3 个月后失效，最可能的原因是什么？
-- 关于当前情况，我最大的遗漏是什么？
-- 我没有意识到什么？
-- 可以用哪些不同的做法，来提高这次对话的效率？
-- 哪个结论现在看似确定，其实最需要证据？
-- 如果只能做一半，哪一半最值得先做？
-- 如果必须砍掉一个能力，应该砍什么，为什么？
-- 这个需求最可能被 RD、Design、DA 或业务方 challenge 的点是什么？
-- 用户现在不用这个能力时，是怎么绕过去的？
-- 这个需求是否只是解决内部表达问题，而不是用户真实问题？
-- 有什么更低成本的验证方式，可以在进入 PRD 前完成？
-
-## Output Shape
-
-Do not write PRD prose during brainstorm. Output:
-
-- Current thesis.
-- Assumptions and risks.
-- Missing information.
-- Option set.
-- Recommended next stage.
-- Clarifying questions.
+输出顺序可用「任务和现状 → 推荐与权衡 → 已确认的范围 → 影响方案的待决策项」。量化机会写出观测基线和估算假设，缺少依据时先写预期改善的任务结果。
