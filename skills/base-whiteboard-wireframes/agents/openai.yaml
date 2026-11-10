@@ -1,0 +1,4 @@
+interface:
+  display_name: "Base 飞书画板线稿"
+  short_description: "用内置 Base 底稿绘制界面和交互状态，交付为飞书云文档内的可编辑画板"
+  default_prompt: "用 $base-whiteboard-wireframes 根据这段需求绘制线稿，插入飞书文档指定章节的画板。"

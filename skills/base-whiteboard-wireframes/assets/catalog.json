@@ -1,0 +1,937 @@
+{
+  "schema_version": 1,
+  "templates": [
+    {
+      "id": "desktop-grid",
+      "title": "桌面数据表",
+      "svg": "desktop-grid.svg",
+      "png": "desktop-grid.png",
+      "scenarios": [
+        "表头、字段、单元格与批量操作"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        }
+      }
+    },
+    {
+      "id": "field-picker",
+      "title": "字段类型选择",
+      "svg": "field-picker.svg",
+      "png": "field-picker.png",
+      "scenarios": [
+        "新增字段",
+        "替换字段类型"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        },
+        "field-picker": {
+          "x": 1105,
+          "y": 217,
+          "width": 307,
+          "height": 470
+        },
+        "field-picker-option": {
+          "x": 1120,
+          "y": 296,
+          "width": 278,
+          "height": 30
+        }
+      }
+    },
+    {
+      "id": "field-config",
+      "title": "字段配置",
+      "svg": "field-config.svg",
+      "png": "field-config.png",
+      "scenarios": [
+        "修改字段标题",
+        "设置字段类型、默认值和选项"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        },
+        "field-config": {
+          "x": 1007,
+          "y": 219,
+          "width": 405,
+          "height": 386
+        },
+        "field-type": {
+          "x": 1029,
+          "y": 387,
+          "width": 359,
+          "height": 37
+        },
+        "default-value": {
+          "x": 1029,
+          "y": 457,
+          "width": 359,
+          "height": 37
+        },
+        "field-config-actions": {
+          "x": 1195,
+          "y": 551,
+          "width": 196,
+          "height": 45
+        }
+      }
+    },
+    {
+      "id": "record-detail",
+      "title": "记录详情侧栏",
+      "svg": "record-detail.svg",
+      "png": "record-detail.png",
+      "scenarios": [
+        "查看记录",
+        "在详情中编辑字段",
+        "展开编辑"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        },
+        "detail-panel": {
+          "x": 864,
+          "y": 58,
+          "width": 576,
+          "height": 842
+        },
+        "record-title": {
+          "x": 890,
+          "y": 128,
+          "width": 519,
+          "height": 46
+        },
+        "detail-fields": {
+          "x": 889,
+          "y": 228,
+          "width": 525,
+          "height": 229
+        },
+        "detail-target-field": {
+          "x": 889,
+          "y": 401,
+          "width": 525,
+          "height": 56
+        }
+      }
+    },
+    {
+      "id": "editor-modal",
+      "title": "居中编辑弹窗",
+      "svg": "editor-modal.svg",
+      "png": "editor-modal.png",
+      "scenarios": [
+        "展开编辑",
+        "输入长内容",
+        "保存与取消"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        },
+        "editor-modal": {
+          "x": 335,
+          "y": 151,
+          "width": 770,
+          "height": 568
+        },
+        "editor-toolbar": {
+          "x": 359,
+          "y": 228,
+          "width": 722,
+          "height": 45
+        },
+        "editor-content": {
+          "x": 359,
+          "y": 274,
+          "width": 722,
+          "height": 343
+        },
+        "editor-actions": {
+          "x": 879,
+          "y": 650,
+          "width": 203,
+          "height": 51
+        }
+      }
+    },
+    {
+      "id": "kanban",
+      "title": "看板视图",
+      "svg": "kanban.svg",
+      "png": "kanban.png",
+      "scenarios": [
+        "状态分组",
+        "卡片字段",
+        "卡片移动"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "kanban-group": {
+          "x": 264,
+          "y": 176,
+          "width": 367,
+          "height": 693
+        },
+        "kanban-card": {
+          "x": 277,
+          "y": 231,
+          "width": 341,
+          "height": 122
+        },
+        "card-field": {
+          "x": 292,
+          "y": 307,
+          "width": 305,
+          "height": 26
+        }
+      }
+    },
+    {
+      "id": "calendar",
+      "title": "日历视图",
+      "svg": "calendar.svg",
+      "png": "calendar.png",
+      "scenarios": [
+        "日历事件",
+        "日期筛选",
+        "日程预览"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "calendar-header": {
+          "x": 266,
+          "y": 174,
+          "width": 1141,
+          "height": 49
+        },
+        "calendar-day": {
+          "x": 429,
+          "y": 376,
+          "width": 164,
+          "height": 113
+        },
+        "calendar-event": {
+          "x": 439,
+          "y": 410,
+          "width": 143,
+          "height": 25
+        }
+      }
+    },
+    {
+      "id": "gantt",
+      "title": "甘特图视图",
+      "svg": "gantt.svg",
+      "png": "gantt.png",
+      "scenarios": [
+        "时间条",
+        "左侧表格",
+        "进度视图"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "gantt-field-pane": {
+          "x": 264,
+          "y": 180,
+          "width": 269,
+          "height": 595
+        },
+        "gantt-time-axis": {
+          "x": 533,
+          "y": 180,
+          "width": 878,
+          "height": 62
+        },
+        "gantt-task-bar": {
+          "x": 543,
+          "y": 258,
+          "width": 128,
+          "height": 29
+        }
+      }
+    },
+    {
+      "id": "gallery",
+      "title": "画册视图",
+      "svg": "gallery.svg",
+      "png": "gallery.png",
+      "scenarios": [
+        "画册卡片",
+        "卡片封面与字段"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "gallery-card": {
+          "x": 264,
+          "y": 176,
+          "width": 362,
+          "height": 312
+        },
+        "card-cover": {
+          "x": 265,
+          "y": 177,
+          "width": 360,
+          "height": 143
+        },
+        "card-field": {
+          "x": 279,
+          "y": 432,
+          "width": 328,
+          "height": 35
+        }
+      }
+    },
+    {
+      "id": "form",
+      "title": "表单与问卷预览",
+      "svg": "form.svg",
+      "png": "form.png",
+      "scenarios": [
+        "字段转为题目",
+        "填写",
+        "必填提示",
+        "提交"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "form-header": {
+          "x": 352,
+          "y": 104,
+          "width": 736,
+          "height": 82
+        },
+        "form-question": {
+          "x": 375,
+          "y": 315,
+          "width": 688,
+          "height": 166
+        },
+        "form-attachment": {
+          "x": 376,
+          "y": 615,
+          "width": 243,
+          "height": 81
+        },
+        "form-submit": {
+          "x": 379,
+          "y": 729,
+          "width": 106,
+          "height": 34
+        }
+      }
+    },
+    {
+      "id": "app-dashboard",
+      "title": "应用与仪表盘布局",
+      "svg": "app-dashboard.svg",
+      "png": "app-dashboard.png",
+      "scenarios": [
+        "列表组件",
+        "图表组件",
+        "配置与数据展示"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "dashboard-metrics": {
+          "x": 253,
+          "y": 138,
+          "width": 1157,
+          "height": 111
+        },
+        "app-list": {
+          "x": 253,
+          "y": 269,
+          "width": 721,
+          "height": 445
+        },
+        "app-list-value": {
+          "x": 279,
+          "y": 398,
+          "width": 290,
+          "height": 47
+        },
+        "dashboard-chart": {
+          "x": 991,
+          "y": 269,
+          "width": 419,
+          "height": 445
+        },
+        "dashboard-config": {
+          "x": 1200,
+          "y": 14,
+          "width": 86,
+          "height": 34
+        }
+      }
+    },
+    {
+      "id": "mobile-grid",
+      "title": "手机数据表",
+      "svg": "mobile-grid.svg",
+      "png": "mobile-grid.png",
+      "scenarios": [
+        "手机端表头",
+        "新增字段",
+        "单元格选中"
+      ],
+      "width": 420,
+      "height": 900,
+      "anchors": {
+        "mobile-header": {
+          "x": 0,
+          "y": 44,
+          "width": 420,
+          "height": 56
+        },
+        "view-tabs": {
+          "x": 0,
+          "y": 101,
+          "width": 420,
+          "height": 46
+        },
+        "table-header": {
+          "x": 0,
+          "y": 201,
+          "width": 420,
+          "height": 42
+        },
+        "field-add": {
+          "x": 369,
+          "y": 201,
+          "width": 47,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 0,
+          "y": 243,
+          "width": 420,
+          "height": 544
+        },
+        "selected-cell": {
+          "x": 35,
+          "y": 243,
+          "width": 169,
+          "height": 68
+        }
+      }
+    },
+    {
+      "id": "mobile-sheet",
+      "title": "手机底部字段配置",
+      "svg": "mobile-sheet.svg",
+      "png": "mobile-sheet.png",
+      "scenarios": [
+        "底部弹层",
+        "手机端字段类型配置",
+        "保存与取消"
+      ],
+      "width": 420,
+      "height": 900,
+      "anchors": {
+        "mobile-header": {
+          "x": 0,
+          "y": 44,
+          "width": 420,
+          "height": 56
+        },
+        "view-tabs": {
+          "x": 0,
+          "y": 101,
+          "width": 420,
+          "height": 46
+        },
+        "table-header": {
+          "x": 0,
+          "y": 201,
+          "width": 420,
+          "height": 42
+        },
+        "field-add": {
+          "x": 369,
+          "y": 201,
+          "width": 47,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 0,
+          "y": 243,
+          "width": 420,
+          "height": 544
+        },
+        "selected-cell": {
+          "x": 35,
+          "y": 243,
+          "width": 169,
+          "height": 68
+        },
+        "bottom-sheet": {
+          "x": 0,
+          "y": 345,
+          "width": 420,
+          "height": 555
+        },
+        "sheet-actions": {
+          "x": 14,
+          "y": 369,
+          "width": 392,
+          "height": 41
+        },
+        "field-type": {
+          "x": 21,
+          "y": 574,
+          "width": 378,
+          "height": 44
+        },
+        "default-value": {
+          "x": 21,
+          "y": 678,
+          "width": 378,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "excel-import-map",
+      "title": "Excel 追加导入映射",
+      "svg": "excel-import-map.svg",
+      "png": "excel-import-map.png",
+      "scenarios": [
+        "导入映射",
+        "数据预览",
+        "确认导入"
+      ],
+      "width": 1440,
+      "height": 900,
+      "anchors": {
+        "sidebar": {
+          "x": 0,
+          "y": 59,
+          "width": 242,
+          "height": 841
+        },
+        "view-tabs": {
+          "x": 243,
+          "y": 59,
+          "width": 1197,
+          "height": 45
+        },
+        "toolbar": {
+          "x": 243,
+          "y": 105,
+          "width": 1197,
+          "height": 55
+        },
+        "view-canvas": {
+          "x": 243,
+          "y": 161,
+          "width": 1197,
+          "height": 738
+        },
+        "table-header": {
+          "x": 264,
+          "y": 176,
+          "width": 1149,
+          "height": 42
+        },
+        "field-add": {
+          "x": 1351,
+          "y": 176,
+          "width": 62,
+          "height": 42
+        },
+        "grid-body": {
+          "x": 264,
+          "y": 218,
+          "width": 1149,
+          "height": 328
+        },
+        "selected-cell": {
+          "x": 1079,
+          "y": 218,
+          "width": 272,
+          "height": 41
+        },
+        "import-modal": {
+          "x": 214,
+          "y": 103,
+          "width": 1012,
+          "height": 708
+        },
+        "import-progress": {
+          "x": 237,
+          "y": 181,
+          "width": 569,
+          "height": 35
+        },
+        "import-mapping": {
+          "x": 238,
+          "y": 281,
+          "width": 964,
+          "height": 302
+        },
+        "mapping-target": {
+          "x": 843,
+          "y": 339,
+          "width": 334,
+          "height": 36
+        },
+        "import-review": {
+          "x": 238,
+          "y": 602,
+          "width": 964,
+          "height": 54
+        },
+        "import-actions": {
+          "x": 999,
+          "y": 744,
+          "width": 210,
+          "height": 49
+        }
+      }
+    }
+  ]
+}

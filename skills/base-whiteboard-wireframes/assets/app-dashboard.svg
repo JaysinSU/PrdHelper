@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#edf1f7" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="1440" height="62" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<line x1="0" y1="62" x2="1440" y2="62" stroke="#dbe2ed" stroke-width="1"/>
+<text x="24" y="40" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="17" font-weight="650">项目协作台  /  应用</text>
+<rect x="1200" y="14" width="86" height="34" rx="6" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="1213" y="36" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">配置</text>
+<rect x="1311" y="14" width="88" height="34" rx="6" fill="#2860de" stroke="none" stroke-width="1"/>
+<text x="1324" y="36" fill="#ffffff" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">发布</text>
+<rect x="0" y="63" width="229" height="837" rx="0" fill="#f6f8fc" stroke="none" stroke-width="1"/>
+<line x1="229" y1="62" x2="229" y2="900" stroke="#dbe2ed" stroke-width="1"/>
+<rect x="15" y="94" width="198" height="34" rx="5" fill="#eef3ff" stroke="none" stroke-width="1"/>
+<text x="29" y="116" fill="#2860de" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="550">项目概览</text>
+<rect x="15" y="137" width="198" height="34" rx="5" fill="#f6f8fc" stroke="none" stroke-width="1"/>
+<text x="29" y="159" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="550">进度管理</text>
+<rect x="15" y="180" width="198" height="34" rx="5" fill="#f6f8fc" stroke="none" stroke-width="1"/>
+<text x="29" y="202" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="550">问题清单</text>
+<text x="253" y="109" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="650">项目概览</text>
+<rect x="253" y="138" width="373" height="111" rx="10" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="275" y="173" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">记录总数</text>
+<text x="275" y="223" fill="#2860de" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="29" font-weight="650">24</text>
+<rect x="645" y="138" width="373" height="111" rx="10" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="667" y="173" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">进行中</text>
+<text x="667" y="223" fill="#2860de" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="29" font-weight="650">8</text>
+<rect x="1037" y="138" width="373" height="111" rx="10" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="1059" y="173" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">已完成</text>
+<text x="1059" y="223" fill="#2860de" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="29" font-weight="650">12</text>
+<rect x="253" y="269" width="721" height="445" rx="10" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="275" y="304" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">项目列表</text>
+<text x="275" y="331" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">数据来源  /  项目跟进</text>
+<rect x="268" y="353" width="691" height="40" rx="0" fill="#f6f8fc" stroke="none" stroke-width="1"/>
+<text x="285" y="379" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">项目名称</text>
+<text x="574" y="379" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">状态</text>
+<text x="727" y="379" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">负责人</text>
+<text x="839" y="379" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="550">截止日期</text>
+<line x1="268" y1="395" x2="959" y2="395" stroke="#dbe2ed" stroke-width="1"/>
+<text x="285" y="425" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">更新交付清单</text>
+<rect x="574" y="405" width="67" height="25" rx="5" fill="#e8efff" stroke="none" stroke-width="1"/>
+<text x="583" y="422" fill="#345db2" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">进行中</text>
+<text x="727" y="425" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">成员 A</text>
+<text x="839" y="425" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">2026-05-12</text>
+<line x1="268" y1="444" x2="959" y2="444" stroke="#dbe2ed" stroke-width="1"/>
+<text x="285" y="474" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">整理现场反馈</text>
+<rect x="574" y="454" width="67" height="25" rx="5" fill="#f2edf9" stroke="none" stroke-width="1"/>
+<text x="583" y="471" fill="#70549b" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">待处理</text>
+<text x="727" y="474" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">成员 B</text>
+<text x="839" y="474" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">2026-05-13</text>
+<line x1="268" y1="493" x2="959" y2="493" stroke="#dbe2ed" stroke-width="1"/>
+<text x="285" y="523" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">核对项目排期</text>
+<rect x="574" y="503" width="67" height="25" rx="5" fill="#e9f5ee" stroke="none" stroke-width="1"/>
+<text x="583" y="520" fill="#347055" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">已完成</text>
+<text x="727" y="523" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">成员 C</text>
+<text x="839" y="523" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">2026-05-14</text>
+<line x1="268" y1="542" x2="959" y2="542" stroke="#dbe2ed" stroke-width="1"/>
+<text x="285" y="572" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">准备验收材料</text>
+<rect x="574" y="552" width="67" height="25" rx="5" fill="#e8efff" stroke="none" stroke-width="1"/>
+<text x="583" y="569" fill="#345db2" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">进行中</text>
+<text x="727" y="572" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">成员 A</text>
+<text x="839" y="572" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">2026-05-15</text>
+<line x1="268" y1="591" x2="959" y2="591" stroke="#dbe2ed" stroke-width="1"/>
+<text x="285" y="621" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">跟进测试结果</text>
+<rect x="574" y="601" width="67" height="25" rx="5" fill="#f2edf9" stroke="none" stroke-width="1"/>
+<text x="583" y="618" fill="#70549b" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">待处理</text>
+<text x="727" y="621" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">成员 B</text>
+<text x="839" y="621" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">2026-05-16</text>
+<rect x="991" y="269" width="419" height="445" rx="10" fill="#ffffff" stroke="#dbe2ed" stroke-width="1"/>
+<text x="1013" y="304" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="650">状态分布</text>
+<text x="1013" y="331" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">按记录数统计</text>
+<text x="1016" y="394" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">进行中</text>
+<rect x="1016" y="406" width="235" height="24" rx="4" fill="#e8efff" stroke="none" stroke-width="1"/>
+<text x="1025" y="423" fill="#345db2" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="650">8</text>
+<text x="1016" y="480" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">待处理</text>
+<rect x="1016" y="492" width="118" height="24" rx="4" fill="#f2edf9" stroke="none" stroke-width="1"/>
+<text x="1025" y="509" fill="#70549b" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="650">4</text>
+<text x="1016" y="566" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">已完成</text>
+<rect x="1016" y="578" width="318" height="24" rx="4" fill="#e9f5ee" stroke="none" stroke-width="1"/>
+<text x="1025" y="595" fill="#347055" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="650">12</text>
+</svg>

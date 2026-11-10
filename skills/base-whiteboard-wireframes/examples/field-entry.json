@@ -1,0 +1,18 @@
+{
+  "columns": 2,
+  "arrows": true,
+  "frames": [
+    {
+      "title": "打开字段入口",
+      "template": "desktop-grid",
+      "highlight": ["field-add"],
+      "caption": "从表格列头打开字段类型选择。"
+    },
+    {
+      "title": "查看字段类型",
+      "template": "field-picker",
+      "highlight": ["field-picker-option"],
+      "caption": "在类型列表里找到要配置的字段。"
+    }
+  ]
+}
