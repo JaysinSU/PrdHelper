@@ -3,14 +3,14 @@
 from base_chrome import (Board, chrome, WIDTH, HEIGHT, SIDEBAR, INK, MUTED,
                          FAINT, LINE, PANEL, BG, WHITE, BLUE, TINT)
 
-REGIONS = [('华东一区','#fbefc7'),('华南一区','#d9f2ed'),('华北一区','#f9e5e5'),('华东二区','#eee7fb')]
-STORES = [
-    ('STORE-SH-001','示例上海静安店','直营','华东一区','上海'),
-    ('STORE-HZ-002','示例杭州湖滨店','直营','华东一区','杭州'),
-    ('STORE-GZ-003','示例广州天河店','加盟','华南一区','广州'),
-    ('STORE-BJ-004','示例北京望京店','直营','华北一区','北京'),
-    ('STORE-SZ-005','示例深圳科技园店','加盟','华南一区','深圳'),
-    ('STORE-SH-006','示例上海大学城店','快闪','华东二区','上海'),
+GROUPS = [('分组1','#fbefc7'),('分组2','#d9f2ed'),('分组3','#f9e5e5'),('分组4','#eee7fb')]
+EXAMPLE_ROWS = [
+    ('示例数据','示例数据','选项1','分组1','示例数据'),
+    ('示例数据','示例数据','选项1','分组1','示例数据'),
+    ('示例数据','示例数据','选项2','分组2','示例数据'),
+    ('示例数据','示例数据','选项1','分组3','示例数据'),
+    ('示例数据','示例数据','选项2','分组2','示例数据'),
+    ('示例数据','示例数据','选项3','分组4','示例数据'),
 ]
 COLS = [204,250,359,513,615,718,820,975,1129,1283,1385,1558,1600]
 
@@ -67,7 +67,7 @@ def grid_content(b, selected=False):
     for i in range(22):
         b.line(SIDEBAR,y0+hh+i*rh,WIDTH,y0+hh+i*rh)
     b.rect(227,139,11,11,'none',MUTED,1)
-    headers=[('门店编号','text'),('门店名称','text'),('门店类型','choice'),('所属区域','choice'),('城市','text'),('门店负责人','person'),('区域经理','person'),('文本 5','text'),('营业状态','choice'),('门店标签','text'),('开业日期','date')]
+    headers=[('文本1','text'),('文本2','text'),('单选1','choice'),('单选2','choice'),('文本3','text'),('人员1','person'),('人员2','person'),('文本4','text'),('单选3','choice'),('多选1','text'),('日期1','date')]
     for i,(label,kind) in enumerate(headers):
         # The partial date column at the viewport edge intentionally retains the scroll position.
         if i==10:
@@ -78,29 +78,29 @@ def grid_content(b, selected=False):
         y=y0+hh+i*rh
         b.text(229,y+18,str(i+1),11,FAINT)
         if i<6:
-            code,name,typ,area,city=STORES[i]
+            code,name,typ,area,city=EXAMPLE_ROWS[i]
             b.text(260,y+18,code,11.5,INK)
             b.text(367,y+18,name,11.5,INK)
-            compact_pill(b,522,y+5,typ,('#e7ebfb' if typ=='直营' else '#fcebd8' if typ=='加盟' else '#d8f0f5'),w=37)
-            rfill=dict(REGIONS)[area]
+            compact_pill(b,522,y+5,typ,('#e7ebfb' if typ=='选项1' else '#fcebd8' if typ=='选项2' else '#d8f0f5'),w=47)
+            rfill=dict(GROUPS)[area]
             compact_pill(b,623,y+5,area,rfill,w=64)
             b.text(726,y+18,city,11.5)
             for px in (829,984):
                 b.circle(px+8,y+13,8,'#e0e8f0')
-                b.text(px+22,y+18,'成员 A',11.5)
-            compact_pill(b,1291,y+5,'营业中','#fbefc7',w=49)
-            tags=[('商圈店','外卖占比高'),('商圈店','夜间营业'),('商圈店','新开店'),('写字楼店','外卖占比高'),('写字楼店','社群店'),('校园店','夜间营业')][i]
+                b.text(px+22,y+18,'示例成员',11.5)
+            compact_pill(b,1291,y+5,'选项1','#fbefc7',w=49)
+            tags=[('选项1','选项2'),('选项1','选项2'),('选项1','选项3'),('选项1','选项2'),('选项1','选项2'),('选项1','选项2')][i]
             compact_pill(b,1393,y+5,tags[0],'#e6ebfb',w=57 if len(tags[0])==4 else 47)
             compact_pill(b,1454,y+5,tags[1],'#f8ead9',w=min(88,len(tags[1])*11+12))
         elif i<18:
-            b.text(260,y+18,'STORE-SH-006',11.5,INK)
+            b.text(260,y+18,'示例数据',11.5,INK)
             if i==6:
-                b.text(367,y+18,'示例上海大学城店…',11.5,INK)
-                compact_pill(b,522,y+5,'直营','#e7ebfb',w=37)
+                b.text(367,y+18,'示例数据…',11.5,INK)
+                compact_pill(b,522,y+5,'选项1','#e7ebfb',w=47)
         if i==20:
-            compact_pill(b,623,y+5,'华东二区','#eee7fb',w=64)
+            compact_pill(b,623,y+5,'分组4','#eee7fb',w=64)
         if i<18:
-            b.text(1565,y+18,'2026/',10.5,MUTED)
+            b.text(1565,y+18,'示例',10.5,MUTED)
     b.text(225,ybottom+21,'+',19,FAINT)
     b.line(SIDEBAR,ybottom+28,WIDTH,ybottom+28)
     b.line(SIDEBAR,892,WIDTH,892)
@@ -126,10 +126,10 @@ def desktop_grid():
 
 def kanban():
     b=Board('kanban','看板视图',['分组卡片预览','记录详情入口'],width=1600,height=924)
-    chrome(b,active='看板',tools=[('分组依据 所属区域','select'),('卡片配置','table'),('筛选','filter'),('排序','text')])
+    chrome(b,active='看板',tools=[('分组依据 单选2','select'),('卡片配置','table'),('筛选','filter'),('排序','text')])
     xs=[222,448,674,900]
     fills=['#fcf8ed','#edf9f7','#fcf3f4','#f7f3fc']
-    for ci,(x,(region,pillfill),fill) in enumerate(zip(xs,REGIONS,fills)):
+    for ci,(x,(region,pillfill),fill) in enumerate(zip(xs,GROUPS,fills)):
         empty=ci==3
         b.rect(x,130,218,64 if empty else 778,fill,radius=8)
         compact_pill(b,x+10,138,region,pillfill,w=61)
@@ -139,51 +139,51 @@ def kanban():
             continue
         cardx,cardy=x+7,162
         b.rect(cardx,cardy,204,714,WHITE,LINE,5)
-        store=STORES[[0,4,3][ci]]
+        store=EXAMPLE_ROWS[[0,4,3][ci]]
         code,name,typ,area,city=store
         b.text(cardx+11,187,code,12,INK,600)
-        field_label(b,cardx+11,220,'门店名称：')
+        field_label(b,cardx+11,220,'文本2：')
         b.text(cardx+11,244,name,11.5)
-        field_label(b,cardx+11,272,'城市：')
+        field_label(b,cardx+11,272,'文本3：')
         b.text(cardx+11,296,city,11.5)
-        field_label(b,cardx+11,326,'门店类型：','choice')
-        compact_pill(b,cardx+80,313,typ,'#e6ebfb' if typ=='直营' else '#fcebd8',w=35)
-        field_label(b,cardx+11,355,'健康评分：','number')
-        b.text(cardx+80,355,[74,74,52][ci],11.5)
-        field_label(b,cardx+11,384,'目标达成率：','formula')
-        b.text(cardx+92,384,['89.38%','108.80%','81.67%'][ci],11.5)
-        field_label(b,cardx+11,413,'营业状态：','choice')
-        compact_pill(b,cardx+80,400,'营业中','#fbefc7',w=48)
-        field_label(b,cardx+11,442,'开业日期：','date')
-        b.text(cardx+81,442,'2026/07/02',11.5)
-        field_label(b,cardx+11,471,'月目标GMV：','number')
-        b.text(cardx+91,471,['¥320,000','¥250,000','¥300,000'][ci],11.5)
-        field_label(b,cardx+11,500,'本月GMV：','number')
-        b.text(cardx+81,500,['¥286,000','¥272,000','¥245,000'][ci],11.5)
-        field_label(b,cardx+11,529,'门店负责人：','person')
+        field_label(b,cardx+11,326,'单选1：','choice')
+        compact_pill(b,cardx+80,313,typ,'#e6ebfb' if typ=='选项1' else '#fcebd8',w=45)
+        field_label(b,cardx+11,355,'数字1：','number')
+        b.text(cardx+80,355,'示例数据',11.5)
+        field_label(b,cardx+11,384,'公式1：','formula')
+        b.text(cardx+92,384,'示例数据',11.5)
+        field_label(b,cardx+11,413,'单选3：','choice')
+        compact_pill(b,cardx+80,400,'选项1','#fbefc7',w=48)
+        field_label(b,cardx+11,442,'日期1：','date')
+        b.text(cardx+81,442,'示例数据',11.5)
+        field_label(b,cardx+11,471,'数字2：','number')
+        b.text(cardx+91,471,'示例数据',11.5)
+        field_label(b,cardx+11,500,'数字3：','number')
+        b.text(cardx+81,500,'示例数据',11.5)
+        field_label(b,cardx+11,529,'人员1：','person')
         b.circle(cardx+101,525,7,'#e0e8f0')
-        b.text(cardx+113,529,'成员 A',11.5)
-        field_label(b,cardx+11,558,'门店标签：','text')
-        compact_pill(b,cardx+80,545,['商圈店','写字楼店','写字楼店'][ci],'#e6ebfb',w=60)
-        compact_pill(b,cardx+144,545,'外卖高…','#f8ead9',w=52)
-        field_label(b,cardx+11,588,'门店经营摘要：')
-        b.text(cardx+11,614,['本月经营目标达成率 89.38%，','本月营业额持续增长，目标达成率','本月经营情况稳定，健康评分'][ci],11.2)
-        b.text(cardx+11,633,['健康评分 74，需关注服务体验。…','108.80%，需持续跟进门店反馈。…','52，需持续改善门店服务体验。…'][ci],11.2)
-        field_label(b,cardx+11,663,'区域经理：','person')
+        b.text(cardx+113,529,'示例成员',11.5)
+        field_label(b,cardx+11,558,'多选1：','text')
+        compact_pill(b,cardx+80,545,['选项1','选项1','选项1'][ci],'#e6ebfb',w=60)
+        compact_pill(b,cardx+144,545,'选项2','#f8ead9',w=52)
+        field_label(b,cardx+11,588,'文本4：')
+        b.text(cardx+11,614,'示例数据…',11.2)
+        b.text(cardx+11,633,'示例数据…',11.2)
+        field_label(b,cardx+11,663,'人员2：','person')
         b.circle(cardx+101,659,7,'#e0e8f0')
-        b.text(cardx+113,663,'成员 A',11.5)
-        field_label(b,cardx+11,692,'是否重点门店：','check')
+        b.text(cardx+113,663,'示例成员',11.5)
+        field_label(b,cardx+11,692,'复选框1：','check')
         b.rect(cardx+123,681,12,12,'#64b66e' if ci!=1 else WHITE,LINE,2)
         if ci!=1:
             b.line(cardx+125,687,cardx+128,690,WHITE,1.2)
             b.line(cardx+128,690,cardx+133,684,WHITE,1.2)
-        field_label(b,cardx+11,721,'新品与营销活动表：','link')
+        field_label(b,cardx+11,721,'关联字段1：','link')
         b.rect(cardx+11,733,94,16,'#e7e9ec')
-        b.text(cardx+18,745,'MKT-202607-02',10.5)
-        field_label(b,cardx+11,779,'Last Modified Date：','date',10.5)
-        b.text(cardx+11,799,'2026/11/11 16:13',10.5,MUTED)
-        field_label(b,cardx+11,827,'Date Created 2：','date',10.5)
-        b.text(cardx+11,848,'2026/07/02',10.5,MUTED)
+        b.text(cardx+18,745,'示例数据',10.5)
+        field_label(b,cardx+11,779,'修改时间：','date',10.5)
+        b.text(cardx+11,799,'示例数据',10.5,MUTED)
+        field_label(b,cardx+11,827,'创建时间：','date',10.5)
+        b.text(cardx+11,848,'示例数据',10.5,MUTED)
         b.text(x+104,898,'+',20,FAINT)
         b.anchor(f'kanban-card-{ci+1}',cardx,cardy,204,714)
     b.anchor('kanban-groups',222,130,896,778)
@@ -225,7 +225,7 @@ def calendar():
         x=SIDEBAR+cw*col+3;y=y0+row*rh+25+slot*21
         b.rect(x,y,cw-12,18,'#edf1fd',radius=3)
         b.rect(x,y,2,18,'#7694ef',radius=1)
-        b.text(x+7,y+13,'未命名记录',10.5,INK)
+        b.text(x+7,y+13,'示例数据',10.5,INK)
     b.anchor('calendar-month-controls',225,137,1359,29)
     b.anchor('calendar-grid',204,197,1396,723)
     b.anchor('calendar-event',1004,342.5,187.4,18)
@@ -248,7 +248,7 @@ def gantt():
     b.text(1540,149,'‹',18,MUTED)
     b.text(1574,149,'›',18,MUTED)
     b.rect(227,176,11,11,'none',MUTED,1)
-    field_label(b,261,186,'门店编号','text',11.5)
+    field_label(b,261,186,'文本1','text',11.5)
     ncols=23;cw=(WIDTH-split)/ncols
     labels=[29,30]+list(range(1,22))
     for i,label in enumerate(labels):
@@ -262,12 +262,12 @@ def gantt():
     for i in range(21):
         y=196+rh*i
         b.text(229,y+18,str(i+1),11,FAINT)
-        if i<18:b.text(261,y+18,STORES[i][0] if i<6 else 'STORE-SH-006',11.5)
+        if i<18:b.text(261,y+18,EXAMPLE_ROWS[i][0] if i<6 else '示例数据',11.5)
         if i<6:
             x=split+cw*3
             b.rect(x+1,y+1,cw-2,25,'#48a95b',radius=5)
             b.text(x+18,y+18,'1天',11,WHITE)
-            b.text(x+cw+8,y+18,STORES[i][1],11.5)
+            b.text(x+cw+8,y+18,EXAMPLE_ROWS[i][1],11.5)
         elif i==6:
             x=split+cw*15
             b.rect(x+1,y+1,cw-2,25,'#48a95b',radius=5)
@@ -295,19 +295,19 @@ def gallery():
             h=min(ch,HEIGHT-y-2)
             b.rect(x,y,cw,h,WHITE,LINE,7)
             idx=row*5+col
-            code=STORES[idx][0] if idx<6 else 'STORE-SH-006'
+            code=EXAMPLE_ROWS[idx][0] if idx<6 else '示例数据'
             b.text(x+15,y+27,code,13,INK,550)
             if idx<6:
-                _,name,typ,area,city=STORES[idx]
-                field_label(b,x+15,y+56,'门店名称：')
+                _,name,typ,area,city=EXAMPLE_ROWS[idx]
+                field_label(b,x+15,y+56,'文本2：')
                 b.text(x+15,y+81,name,12)
-                field_label(b,x+15,y+111,'所属区域：','choice')
-                compact_pill(b,x+86,y+98,area,dict(REGIONS)[area],w=63)
-                field_label(b,x+15,y+141,'城市：')
+                field_label(b,x+15,y+111,'单选2：','choice')
+                compact_pill(b,x+86,y+98,area,dict(GROUPS)[area],w=63)
+                field_label(b,x+15,y+141,'文本3：')
                 b.text(x+15,y+166,city,12)
             if row==3 and col>=3:
                 b.rect(x+13,y+7,160,28,WHITE)
-                b.text(x+15,y+27,'未命名记录',13,FAINT)
+                b.text(x+15,y+27,'示例数据',13,FAINT)
     b.anchor('gallery-grid',218,130,1366,792)
     b.anchor('gallery-card',218,130,262,216)
     b.anchor('gallery-target-field',233,178,232,44)

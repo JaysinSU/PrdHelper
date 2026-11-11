@@ -51,7 +51,7 @@ def draw_workflow_canvas(b):
     b.rect(227, 81, 5, 5, 'none', MUTED, 1)
     b.line(225, 77, 225, 80, MUTED, 1)
     b.line(220, 80, 230, 80, MUTED, 1)
-    b.text(237, 83, '库存变动提醒工作流', 14, INK, 550)
+    b.text(237, 83, '工作流1', 14, INK, 550)
     b.line(463, 72, 463, 84, LINE)
     toggle(b, 481, 71)
     b.text(1421, 84, '运行日志', 13, MUTED)
@@ -63,8 +63,8 @@ def draw_workflow_canvas(b):
     b.line(cx, 407, cx, 476, '#c4c9cf', 1.2)
     b.line(cx, 550, cx, 616, '#c4c9cf', 1.2)
     for y, index, title, description in (
-        (334, '1', '修改记录时', '数据表：库存变动表'),
-        (476, '2', '发送飞书消息', '接收方：成员 A'),
+        (334, '1', '修改记录时', '数据表：数据表1'),
+        (476, '2', '发送飞书消息', '接收方：示例成员'),
     ):
         b.text(710, y + 42, index, 13, FAINT)
         b.rect(x, y, w, h, WHITE, '#e7e9ed', 12)
@@ -107,14 +107,14 @@ def draw_workflow_canvas(b):
 
 def workflow():
     b = Board('workflow', '工作流', ['触发器、动作节点与添加步骤', '保存并启用工作流'])
-    chrome(b, mode='workflow', selected='数据变动提醒工作流', toolbar=False)
+    chrome(b, mode='workflow', selected='工作流1', toolbar=False)
     draw_workflow_canvas(b)
     return b
 
 
 def advanced_permissions():
     b = Board('advanced-permissions', '高级权限', ['角色权限', '数据表访问范围', '权限配置与保存'])
-    chrome(b, mode='workflow', selected='数据变动提醒工作流', toolbar=False)
+    chrome(b, mode='workflow', selected='工作流1', toolbar=False)
     draw_workflow_canvas(b)
     b.nodes.append('<rect x="0" y="0" width="1600" height="924" fill="#000000" opacity="0.49"/>')
     mx, my, mw, mh = 124, 43, 1352, 881
@@ -188,10 +188,7 @@ def advanced_permissions():
     b.text(404, 244, '搜索数据表', 13, FAINT)
     chevron(b, 388, 284)
     b.text(405, 289, '文件夹', 13, INK)
-    table_names = ['门店信息表', '产品信息表', '物料信息表', '数据表', '供应商信息表',
-                   '订货申请表', '营销活动表', '会员消费记录表', '客诉工单表', '门店经营日报表',
-                   '门店档案与经营目标表', '产品物料与供应商表', '订货库存与损耗表',
-                   '会员客诉与服务工单表', '财务结算与经营分析表', '收集表']
+    table_names = [f'数据表{i}' for i in range(1, 17)]
     for i, label in enumerate(table_names):
         y = 318 + 34 * i
         nested = i < 10

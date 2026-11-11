@@ -108,12 +108,12 @@ def form_card(b, x, y, w=494, editing=False):
         first, step = y+156, 87
     else:
         first, step = y+112, 86
-    fields = [('门店编号', '请输入内容', 'text'),
-              ('门店名称', '请输入内容', 'text'),
-              ('门店类型', '请选择选项', 'select'),
-              ('所属区域', '请选择选项', 'select'),
-              ('城市', '请输入内容', 'text'),
-              ('门店负责人', '请选择人员', 'select')]
+    fields = [('文本1', '请输入内容', 'text'),
+              ('文本2', '请输入内容', 'text'),
+              ('单选1', '请选择选项', 'select'),
+              ('单选2', '请选择选项', 'select'),
+              ('文本3', '请输入内容', 'text'),
+              ('人员1', '请选择人员', 'select')]
     for i,(label, placeholder, kind) in enumerate(fields):
         yy = first+i*step
         if yy+50 > HEIGHT-8:
@@ -135,9 +135,9 @@ def form_card(b, x, y, w=494, editing=False):
             b.line(innerx+inputw-17, yy+25, innerx+inputw-13, yy+29, MUTED)
             b.line(innerx+inputw-13, yy+29, innerx+inputw-9, yy+25, MUTED)
     if not editing:
-        b.text(innerx, 855, '区域经理', 12, INK)
-        b.text(innerx, 877, '字段描述：填写对应的负责人信息。', 11, MUTED)
-        b.text(innerx, 896, '信息仅用于业务协作与记录。', 11, MUTED)
+        b.text(innerx, 855, '人员2', 12, INK)
+        b.text(innerx, 877, '字段描述：示例说明。', 11, MUTED)
+        b.text(innerx, 896, '此处展示字段说明。', 11, MUTED)
     b.anchor('form-card', x, y, w, HEIGHT-y)
     b.anchor('form-title', x+40, y+25, w-80, 55)
     b.anchor('form-first-field', innerx, first-15, inputw, 58)
@@ -152,7 +152,7 @@ def form_edit():
     b.text(218, 167, '可选题目', 12, INK, 600)
     b.text(330, 167, '全部添加', 10, BLUE)
     b.text(385, 167, '全部移除', 10, BLUE)
-    for i, label in enumerate(('备注', '补充说明')):
+    for i, label in enumerate(('文本4', '文本5')):
         icon(b, 224, 188+31*i, 'text')
         b.text(246, 200+31*i, label, 12, INK)
         b.text(411, 202+31*i, '+', 20, FAINT)
@@ -191,10 +191,10 @@ def form_fill():
 
 def dashboard():
     b = Board('dashboard', '仪表盘', ['图表组件', '数据筛选', '明细表组件与布局适配'])
-    chrome(b, mode='dashboard', selected='库存与损耗数据分析', toolbar=False)
+    chrome(b, mode='dashboard', selected='仪表盘1', toolbar=False)
     b.rect(SIDEBAR, 56, WIDTH-SIDEBAR, HEIGHT-56, '#f2f3f5')
     b.icon('chart',229,72,13)
-    b.text(251, 84, '订货与库存分析仪表盘', 13, INK, 600)
+    b.text(251, 84, '仪表盘1', 13, INK, 600)
     for x,w,label in ((439,79,'＋ 添加组件'),(524,53,'筛选'),(584,118,'设置自动化发送'),(709,55,'主题')):
         small_action(b, x, 68, label, w)
     for x,w,label in ((1170,78,'智能总结'),(1254,78,'订阅数据'),(1338,90,'生成页面'),(1435,93,'已开启分享')):
@@ -202,19 +202,19 @@ def dashboard():
     b.icon('more',1550,74,13)
     # Full-width filter strip, two KPI cards, three chart cards, then detail table.
     b.rect(224, 106, 1356, 75, WHITE, radius=13)
-    b.text(241, 150, '门店筛选器', 14, INK, 600)
+    b.text(241, 150, '筛选器1', 14, INK, 600)
     b.text(326, 150, '请选择', 14, FAINT)
     chevron(b,1542,143)
-    for x,title,value in ((224,'近期订货总数量','163'),(910,'近期实盘库存总量','109')):
+    for x,title,value in ((224,'指标1','123'),(910,'指标2','456')):
         b.rect(x, 196, 670, 164, WHITE, radius=13)
         b.text(x+40, 251, title, 16, MUTED)
         b.text(x+40, 312, value, 58, INK, 650)
     chart_y, chart_h = 373, 389
-    for x,w,title in ((224,444,'损耗原因分布'),(682,444,'缺货等级分布'),(1140,440,'各门店订货数量排行')):
+    for x,w,title in ((224,444,'图表1'),(682,444,'图表2'),(1140,440,'图表3')):
         b.rect(x, chart_y, w, chart_h, WHITE, radius=13)
         b.text(x+18, chart_y+31, title, 14, INK, 600)
     # Editable pie outline, radial separators and labels.
-    for x,label,fill in ((241,'过期','#c6d5f1'),(285,'制作损耗','#d4e8e3'),(363,'盘点误差','#eee5cb'),(441,'空值','#e2d3ce')):
+    for x,label,fill in ((241,'选项1','#c6d5f1'),(305,'选项2','#d4e8e3'),(369,'选项3','#eee5cb'),(433,'选项4','#e2d3ce')):
         b.circle(x, 423, 3.4, fill)
         b.text(x+8, 427, label, 10, MUTED)
     cx,cy,r = 447,591,91
@@ -222,13 +222,13 @@ def dashboard():
     for px,py in ((447,500),(533,562),(447,682),(392,664)):
         b.line(cx,cy,px,py,FAINT)
     b.line(533,562,552,562,FAINT)
-    b.text(557,566,'过期：2（20%）',10,MUTED)
+    b.text(557,566,'选项1：示例数据',10,MUTED)
     b.line(447,682,488,697,FAINT)
-    b.text(493,703,'制作损耗：3',10,MUTED)
+    b.text(493,703,'选项2：示例数据',10,MUTED)
     b.line(392,664,315,686,FAINT)
-    b.text(242,700,'盘点误差：1',10,MUTED)
+    b.text(242,700,'选项3：示例数据',10,MUTED)
     b.line(356,591,326,591,FAINT)
-    b.text(241,591,'空值：4（40%）',10,MUTED)
+    b.text(241,591,'选项4：示例数据',10,MUTED)
     # Simple bar chart matches two-category visualization and axis density.
     b.circle(701,423,3.4,'#9fadc2'); b.text(711,427,'计数',10,MUTED)
     for i,val in enumerate((0,2,4,6,8)):
@@ -238,9 +238,9 @@ def dashboard():
     b.rect(766,687,45,33,'#ccd8ec',radius=4)
     b.rect(1016,486,45,234,'#ccd8ec',radius=4)
     b.text(784,709,'1',11,MUTED); b.text(1034,507,'7',11,MUTED)
-    b.text(784,742,'低',11,MUTED); b.text(1034,742,'高',11,MUTED)
+    b.text(784,742,'选项1',11,MUTED); b.text(1034,742,'选项2',11,MUTED)
     # Ranking places top 1 in the middle as in the source.
-    for cx,yy,rank,label,val in ((1222,472,'2','示例门店 B','40'),(1359,449,'1','示例门店 A','60'),(1496,472,'3','示例门店 C','35')):
+    for cx,yy,rank,label,val in ((1222,472,'2','示例数据','80'),(1359,449,'1','示例数据','100'),(1496,472,'3','示例数据','60')):
         b.circle(cx,yy,20,'#edf0f4')
         b.nodes.append(f'<circle cx="{cx}" cy="{yy}" r="14" fill="none" stroke="{FAINT}"/>')
         b.text(cx-5,yy+6,rank,18,MUTED,650)
@@ -249,20 +249,20 @@ def dashboard():
         b.text(cx-35,yy+45,label,10,MUTED)
         b.text(cx-10,yy+64,val,17,INK,600)
     b.rect(1157,552,404,103,'#f5f6f8',LINE,7)
-    for i,(name,val) in enumerate((('示例门店 D','28'),('示例门店 E','0'),('示例门店 F','0'))):
+    for i,(name,val) in enumerate((('示例数据','40'),('示例数据','20'),('示例数据','10'))):
         yy=574+34*i
         b.text(1171,yy,i+4,10,MUTED); b.text(1195,yy,name,10,MUTED)
         b.text(1536,yy,val,10,MUTED)
     b.rect(224,775,1356,149,WHITE,radius=13)
-    b.text(241,806,'近期订货库存与损耗明细',14,INK,600)
+    b.text(241,806,'明细表',14,INK,600)
     xs=[241,556,633,710,787,864]
     b.rect(241,826,623,27,'#edf1f8',LINE,6)
-    for i,(label,x) in enumerate(zip(('门店名','订货','盘点','损耗','总计'),xs)):
+    for i,(label,x) in enumerate(zip(('字段1','字段2','字段3','字段4','字段5'),xs)):
         b.text(x+8,845,label,11,INK,600)
     for i in range(2):
         yy=853+i*28
         b.line(241,yy+28,864,yy+28,LINE)
-        b.text(249,yy+19,f'示例门店 {chr(65+i)}',11,MUTED)
+        b.text(249,yy+19,'示例数据',11,MUTED)
         for j in range(1,5): b.text(xs[j]+31,yy+19,1 if j==4 else '—',11,MUTED)
     for xx in xs: b.line(xx,826,xx,909,LINE)
     b.anchor('dashboard-toolbar',204,56,1396,50)
@@ -286,7 +286,7 @@ def survey_tabs(b, active='收集表'):
 
 def questionnaire():
     b = Board('questionnaire','问卷',['配置收集表题目','长内容题型与预览'])
-    chrome(b, mode='dashboard', selected='收集表 4', toolbar=False)
+    chrome(b, mode='dashboard', selected='收集表1', toolbar=False)
     survey_tabs(b)
     b.rect(SIDEBAR,96,WIDTH-SIDEBAR,48,WHITE)
     for x,label in ((1250,'样式'),(1284,'设置'),(1318,'预览'),(1352,'评论'),(1386,'嵌入'),(1420,'展开')):
@@ -327,7 +327,7 @@ def questionnaire():
     b.text(429,512,'i',10,'#94a6b1')
     b.text(357,536,'问题描述',12,'#94a6b1')
     b.rect(357,555,592,34,'#e7eef2',radius=5)
-    b.text(369,578,'[门店信息表].[门店名称]',14,'#94a6b1')
+    b.text(369,578,'[数据表1].[文本1]',14,'#94a6b1')
     b.text(323,664,'*3→',12,MUTED)
     b.text(357,665,'多选题',16,'#526b7b',600)
     b.text(357,686,'问题描述',12,'#94a6b1')
@@ -357,7 +357,7 @@ def questionnaire():
 
 def questionnaire_results():
     b = Board('questionnaire-results','问卷关联数据表',['收集结果与数据表字段映射','数据消费与字段展示'])
-    chrome(b, mode='dashboard', selected='收集表 4', toolbar=False)
+    chrome(b, mode='dashboard', selected='收集表1', toolbar=False)
     survey_tabs(b,'收集结果')
     b.rect(SIDEBAR,96,WIDTH-SIDEBAR,32,WHITE)
     b.line(SIDEBAR,128,WIDTH,128,LINE)
@@ -385,7 +385,7 @@ def questionnaire_results():
         b.text(xs[i+1]+31,149,label,12,INK)
     for yy in (128,158,186,214,242,270): b.line(204,yy,1600,yy,LINE)
     for xx in xs: b.line(xx,128,xx,242,LINE)
-    texts=['','今天补充最新门店信息…','需要核实使用场景…']
+    texts=['','示例数据','示例数据…']
     for i in range(3):
         yy=158+i*28
         b.text(228,yy+19,i+1,11,FAINT)
@@ -395,7 +395,7 @@ def questionnaire_results():
             b.pill(655,yy+5,'1',fill='#e5ecfb',ink='#536b9c',w=19)
         b.text(809,yy+19,'2026/08/13',12,INK)
         b.circle(974,yy+14,8,'#e1e9ee')
-        b.text(988,yy+19,'成员 A',12,INK)
+        b.text(988,yy+19,'示例成员',12,INK)
         for j in range(10):
             xx=1427+j*16
             b.rect(xx,yy+7,12,12,'#e5e7eb',radius=2)

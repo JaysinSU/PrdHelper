@@ -93,16 +93,16 @@ class Board:
         svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.width}" height="{self.height}" viewBox="0 0 {self.width} {self.height}">\n'+ '\n'.join(self.nodes)+'\n</svg>\n'
         (HERE/self.meta['svg']).write_text(svg,encoding='utf-8')
 
-NAV=[('table','门店档案与经营目标表'),('table','产品物料与供应商表'),('table','订货库存与损耗表'),('table','会员客诉与服务工单表'),('table','财务结算与经营分析表'),('chart','总部经营驾驶舱'),('form','收集表'),('form','收集表 2'),('table','新品与营销活动表'),('form','收集表 3'),('search','查询页'),('table','数据表 2'),('workflow','数据变动提醒工作流'),('chart','库存与损耗数据分析'),('form','收集表 4'),('form','文档'),('form','收集表 5'),('form','品牌展示页'),('table','数据表 3'),('chart','数据表 3 数据表现'),('table','测试数据'),('table','测试数据 1')]
+NAV=[('table','数据表1'),('table','数据表2'),('table','数据表3'),('table','数据表4'),('table','数据表5'),('chart','仪表盘1'),('form','收集表1'),('form','收集表2'),('table','数据表6'),('form','收集表3'),('search','查询页1'),('table','数据表7'),('workflow','工作流1'),('chart','仪表盘2'),('form','收集表4'),('form','文档1'),('form','收集表5'),('form','页面1'),('table','数据表8'),('chart','仪表盘3'),('table','数据表9'),('table','数据表10')]
 
-def chrome(b,active='表格',mode='views',selected='门店档案与经营目标表',toolbar=True,tools=None):
+def chrome(b,active='表格',mode='views',selected='数据表1',toolbar=True,tools=None):
     b.rect(0,0,WIDTH,56,WHITE)
     b.line(0,55,WIDTH,55)
     for dy in (18,22,26):b.line(18,dy,29,dy,MUTED)
     b.icon('table',47,18,12)
-    b.text(87,25,'示例空间  ›  业务管理  ›  协作项目  ›',12,MUTED)
+    b.text(87,25,'工作空间  ›  文件夹  ›',12,MUTED)
     b.rect(434,14,13,13,'#a16ae8',radius=3)
-    b.text(454,25,'示例经营协同系统',13,INK,550)
+    b.text(454,25,'示例多维表格',13,INK,550)
     b.text(87,43,'已保存到云端     |     最近修改：刚刚',10,FAINT)
     b.button(1098,13,'分享',True,68)
     b.button(1177,13,'自动化',False,77)
@@ -114,7 +114,7 @@ def chrome(b,active='表格',mode='views',selected='门店档案与经营目标�
     b.rect(0,56,SIDEBAR,HEIGHT-56,WHITE)
     b.line(SIDEBAR,56,SIDEBAR,HEIGHT)
     b.icon('search',17,69);b.text(35,80,'搜索',12,FAINT);b.icon('plus',149,70);b.text(182,80,'≪',14,FAINT)
-    b.icon('form',17,100);b.text(35,112,'示例经营协同系统…',12,INK)
+    b.icon('form',17,100);b.text(35,112,'示例多维表格',12,INK)
     b.text(19,145,'›  文件夹',12,MUTED)
     for i,(ico,label) in enumerate(NAV):
         yy=160+i*32.5
@@ -129,7 +129,7 @@ def chrome(b,active='表格',mode='views',selected='门店档案与经营目标�
     b.anchor('topbar',0,0,WIDTH,56)
     if mode in ('workflow','dashboard'):return
     b.rect(SIDEBAR,56,WIDTH-SIDEBAR,40,PANEL)
-    tabs=[('table','全部门店经营总览','表格',154),('kanban','区域优秀门店','看板',132),('calendar','日历','日历',84),('gantt','甘特图','甘特图',85),('gallery','画册','画册',78),('form','表单','表单',79)] if mode!='survey' else [('form','收集表','收集表',104),('table','收集结果','收集结果',110)]
+    tabs=[('table','表格','表格',84),('kanban','看板','看板',84),('calendar','日历','日历',84),('gantt','甘特图','甘特图',85),('gallery','画册','画册',78),('form','表单','表单',79)] if mode!='survey' else [('form','问卷','收集表',84),('table','收集结果','收集结果',110)]
     xx=SIDEBAR+10
     for ico,label,key,ww in tabs:
         chosen=(key==active)

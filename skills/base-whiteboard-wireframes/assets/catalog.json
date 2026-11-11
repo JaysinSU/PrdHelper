@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "layout_revision": "desktop-reference-v2",
+  "layout_revision": "minimal-background-v3",
   "aliases": {
     "form": "form-fill",
     "app-dashboard": "dashboard"

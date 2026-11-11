@@ -7,9 +7,10 @@ INK, MUTED, FAINT = '#1d2534', '#526078', '#78859a'
 LINE, PANEL, BG, WHITE = '#dbe2ed', '#f6f8fc', '#edf1f7', '#ffffff'
 BLUE, TINT = '#2860de', '#eef3ff'
 WIDTH, HEIGHT = 1440,900
-NAMES = ['更新交付清单', '整理现场反馈', '核对项目排期', '准备验收材料', '跟进测试结果', '整理交接文档', '检查更新说明', '同步处理记录']
-STATUS = [('进行中', '#e8efff', '#345db2'), ('待处理', '#f2edf9', '#70549b'), ('已完成', '#e9f5ee', '#347055')]
-PEOPLE = ['成员 A', '成员 B', '成员 C']
+NAMES = ['示例数据'] * 8
+STATUS = [('选项1', '#e8efff', '#345db2'), ('选项2', '#f2edf9', '#70549b'), ('选项3', '#e9f5ee', '#347055')]
+PEOPLE = ['示例成员'] * 3
+
 class Board:
     def __init__(self, key, title, scenarios, width=WIDTH, height=HEIGHT):
         self.key = key
@@ -66,7 +67,7 @@ def phone_grid(b):
     b.rect(365, 27, 20, 6, INK, radius=2)
     b.rect(390, 28, 2, 4, INK, radius=1)
     b.text(20, 82, '‹', 27, INK, 600)
-    b.text(48, 78, '项目跟进', 20, INK, 650)
+    b.text(48, 78, '数据表1', 20, INK, 650)
     for x in (378, 386, 394):
         b.circle(x, 71, 2, MUTED)
     b.line(0, 100, 420, 100)
@@ -82,7 +83,7 @@ def phone_grid(b):
     b.rect(0, 201, 420, 42, PANEL)
     for x in (35, 204, 284, 363):
         b.line(x, 202, x, 787)
-    for x, label in ((48, '项目名称'), (216, '状态'), (295, '负责人')):
+    for x, label in ((48, '文本1'), (216, '单选1'), (295, '人员1')):
         b.text(x, 228, label, 13, MUTED, 600)
     b.rect(372, 206, 40, 31, TINT, radius=5)
     b.text(386, 230, '+', 21, BLUE, 600)
