@@ -3,16 +3,16 @@
   "arrows": true,
   "frames": [
     {
-      "title": "打开字段入口",
+      "title": "打开字段配置",
       "template": "desktop-grid",
-      "highlight": ["field-add"],
-      "caption": "从表格列头打开字段类型选择。"
+      "highlight": ["toolbar-field-config"],
+      "caption": "保持当前横向滚动位置，从工具栏进入字段配置。"
     },
     {
       "title": "查看字段类型",
       "template": "field-picker",
       "highlight": ["field-picker-option"],
-      "caption": "在类型列表里找到要配置的字段。"
+      "caption": "在字段配置的类型列表中选择文本。"
     }
   ]
 }

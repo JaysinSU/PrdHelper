@@ -74,6 +74,8 @@ def load_frame(frame, folder, catalog):
 def compose(config, folder):
     catalog = json.loads((SKILL / "assets/catalog.json").read_text(encoding="utf-8"))
     templates = {item["id"]: item for item in catalog["templates"]}
+    for alias, target in catalog.get("aliases", {}).items():
+        templates[alias] = templates[target]
     frames = config["frames"]
     columns = config.get("columns", 2)
     if not frames or type(columns) is not int or not 1 <= columns <= 4:

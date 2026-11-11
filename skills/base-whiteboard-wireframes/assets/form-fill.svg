@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="924" viewBox="0 0 1600 924">
+<rect x="0" y="0" width="1600" height="924" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="1600" height="56" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<line x1="0" y1="55" x2="1600" y2="55" stroke="#dfe2e7" stroke-width="1"/>
+<line x1="18" y1="18" x2="29" y2="18" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="22" x2="29" y2="22" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="26" x2="29" y2="26" stroke="#707782" stroke-width="1"/>
+<rect x="47" y="18" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="47" y1="21.96" x2="59" y2="21.96" stroke="#707782" stroke-width="1"/>
+<line x1="47" y1="25.92" x2="59" y2="25.92" stroke="#707782" stroke-width="1"/>
+<line x1="50.96" y1="18" x2="50.96" y2="30" stroke="#707782" stroke-width="1"/>
+<text x="87" y="25" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">示例空间  ›  业务管理  ›  协作项目  ›</text>
+<rect x="434" y="14" width="13" height="13" rx="3" fill="#a16ae8" stroke="none" stroke-width="1"/>
+<text x="454" y="25" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="550">示例经营协同系统</text>
+<text x="87" y="43" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="400">已保存到云端     |     最近修改：刚刚</text>
+<rect x="1098" y="13" width="68" height="28" rx="5" fill="#245bdb" stroke="none" stroke-width="1"/>
+<text x="1108" y="31.0" fill="#ffffff" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="500">分享</text>
+<rect x="1177" y="13" width="77" height="28" rx="5" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="1187" y="31.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="500">自动化</text>
+<rect x="1276" y="25" width="9" height="8" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="1278" y="20" width="5" height="6" rx="2" fill="none" stroke="#707782" stroke-width="1"/>
+<circle cx="1309" cy="26" r="1" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="1314" cy="26" r="1" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="1319" cy="26" r="1" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="1347" cy="25" r="4" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="1350" y1="28" x2="1354" y2="32" stroke="#707782" stroke-width="1"/>
+<line x1="1382.5" y1="20" x2="1382.5" y2="33" stroke="#707782" stroke-width="1"/>
+<line x1="1376" y1="26.5" x2="1389" y2="26.5" stroke="#707782" stroke-width="1"/>
+<line x1="1426" y1="17" x2="1426" y2="31" stroke="#707782" stroke-width="1"/>
+<line x1="1419" y1="24" x2="1433" y2="24" stroke="#707782" stroke-width="1"/>
+<line x1="1422" y1="20" x2="1430" y2="28" stroke="#707782" stroke-width="1"/>
+<line x1="1422" y1="28" x2="1430" y2="20" stroke="#707782" stroke-width="1"/>
+<text x="1440" y="30" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">问问 AI</text>
+<circle cx="1570" cy="26" r="13" fill="#dce5f5" stroke="none" stroke-width="1"/>
+<text x="1566" y="30" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="400">A</text>
+<rect x="0" y="56" width="204" height="868" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<line x1="204" y1="56" x2="204" y2="924" stroke="#dfe2e7" stroke-width="1"/>
+<circle cx="22" cy="74" r="4" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="25" y1="77" x2="29" y2="81" stroke="#707782" stroke-width="1"/>
+<text x="35" y="80" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">搜索</text>
+<line x1="155.5" y1="70" x2="155.5" y2="83" stroke="#707782" stroke-width="1"/>
+<line x1="149" y1="76.5" x2="162" y2="76.5" stroke="#707782" stroke-width="1"/>
+<text x="182" y="80" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">≪</text>
+<rect x="18" y="100" width="11" height="13" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="21" y1="104" x2="23" y2="106" stroke="#707782" stroke-width="1"/>
+<line x1="23" y1="106" x2="27" y2="102" stroke="#707782" stroke-width="1"/>
+<line x1="21" y1="110" x2="27" y2="110" stroke="#707782" stroke-width="1"/>
+<text x="35" y="112" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">示例经营协同系统…</text>
+<text x="19" y="145" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">›  文件夹</text>
+<rect x="9" y="157.0" width="184" height="30" rx="5" fill="#eef2ff" stroke="none" stroke-width="1"/>
+<rect x="18" y="166.0" width="12" height="12" rx="1" fill="none" stroke="#245bdb" stroke-width="1"/>
+<line x1="18" y1="169.96" x2="30" y2="169.96" stroke="#245bdb" stroke-width="1"/>
+<line x1="18" y1="173.92" x2="30" y2="173.92" stroke="#245bdb" stroke-width="1"/>
+<line x1="21.96" y1="166.0" x2="21.96" y2="178.0" stroke="#245bdb" stroke-width="1"/>
+<text x="35" y="177.0" fill="#245bdb" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">门店档案与经营目标表</text>
+<rect x="18" y="198.5" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="202.46" x2="30" y2="202.46" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="206.42" x2="30" y2="206.42" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="198.5" x2="21.96" y2="210.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="209.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">产品物料与供应商表</text>
+<rect x="18" y="231.0" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="234.96" x2="30" y2="234.96" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="238.92" x2="30" y2="238.92" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="231.0" x2="21.96" y2="243.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="242.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">订货库存与损耗表</text>
+<rect x="18" y="263.5" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="267.46" x2="30" y2="267.46" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="271.42" x2="30" y2="271.42" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="263.5" x2="21.96" y2="275.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="274.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">会员客诉与服务工单表</text>
+<rect x="18" y="296.0" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="299.96" x2="30" y2="299.96" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="303.92" x2="30" y2="303.92" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="296.0" x2="21.96" y2="308.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="307.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">财务结算与经营分析表</text>
+<circle cx="24" cy="334.5" r="6" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="328.5" x2="24" y2="334.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="334.5" x2="29" y2="337.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="339.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">总部经营驾驶舱</text>
+<rect x="19" y="361.0" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="365.0" x2="24" y2="367.0" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="367.0" x2="28" y2="363.0" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="371.0" x2="28" y2="371.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="372.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">收集表</text>
+<rect x="19" y="393.5" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="397.5" x2="24" y2="399.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="399.5" x2="28" y2="395.5" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="403.5" x2="28" y2="403.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="404.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">收集表 2</text>
+<rect x="18" y="426.0" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="429.96" x2="30" y2="429.96" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="433.92" x2="30" y2="433.92" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="426.0" x2="21.96" y2="438.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="437.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">新品与营销活动表</text>
+<rect x="19" y="458.5" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="462.5" x2="24" y2="464.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="464.5" x2="28" y2="460.5" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="468.5" x2="28" y2="468.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="469.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">收集表 3</text>
+<circle cx="23" cy="496.0" r="4" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="26" y1="499.0" x2="30" y2="503.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="502.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">查询页</text>
+<rect x="18" y="523.5" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="527.46" x2="30" y2="527.46" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="531.42" x2="30" y2="531.42" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="523.5" x2="21.96" y2="535.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="534.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">数据表 2</text>
+<circle cx="24" cy="557.0" r="2" fill="none" stroke="#707782" stroke-width="1"/>
+<circle cx="19" cy="566.0" r="2" fill="none" stroke="#707782" stroke-width="1"/>
+<circle cx="29" cy="566.0" r="2" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="559.0" x2="24" y2="562.0" stroke="#707782" stroke-width="1"/>
+<line x1="19" y1="562.0" x2="29" y2="562.0" stroke="#707782" stroke-width="1"/>
+<line x1="19" y1="562.0" x2="19" y2="564.0" stroke="#707782" stroke-width="1"/>
+<line x1="29" y1="562.0" x2="29" y2="564.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="567.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">数据变动提醒工作流</text>
+<circle cx="24" cy="594.5" r="6" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="588.5" x2="24" y2="594.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="594.5" x2="29" y2="597.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="599.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">库存与损耗数据分析</text>
+<rect x="19" y="621.0" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="625.0" x2="24" y2="627.0" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="627.0" x2="28" y2="623.0" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="631.0" x2="28" y2="631.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="632.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">收集表 4</text>
+<rect x="19" y="653.5" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="657.5" x2="24" y2="659.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="659.5" x2="28" y2="655.5" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="663.5" x2="28" y2="663.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="664.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">文档</text>
+<rect x="19" y="686.0" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="690.0" x2="24" y2="692.0" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="692.0" x2="28" y2="688.0" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="696.0" x2="28" y2="696.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="697.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">收集表 5</text>
+<rect x="19" y="718.5" width="10" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="722.5" x2="24" y2="724.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="724.5" x2="28" y2="720.5" stroke="#707782" stroke-width="1"/>
+<line x1="22" y1="728.5" x2="28" y2="728.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="729.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">品牌展示页</text>
+<rect x="18" y="751.0" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="754.96" x2="30" y2="754.96" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="758.92" x2="30" y2="758.92" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="751.0" x2="21.96" y2="763.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="762.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">数据表 3</text>
+<circle cx="24" cy="789.5" r="6" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="783.5" x2="24" y2="789.5" stroke="#707782" stroke-width="1"/>
+<line x1="24" y1="789.5" x2="29" y2="792.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="794.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">数据表 3 数据表现</text>
+<rect x="18" y="816.0" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="819.96" x2="30" y2="819.96" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="823.92" x2="30" y2="823.92" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="816.0" x2="21.96" y2="828.0" stroke="#707782" stroke-width="1"/>
+<text x="35" y="827.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">测试数据</text>
+<rect x="18" y="848.5" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="852.46" x2="30" y2="852.46" stroke="#707782" stroke-width="1"/>
+<line x1="18" y1="856.42" x2="30" y2="856.42" stroke="#707782" stroke-width="1"/>
+<line x1="21.96" y1="848.5" x2="21.96" y2="860.5" stroke="#707782" stroke-width="1"/>
+<text x="35" y="859.5" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">测试数据 1</text>
+<rect x="10" y="884" width="183" height="28" rx="5" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="20" y="902.0" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="500">＋ 新建</text>
+<rect x="204" y="56" width="1396" height="40" rx="0" fill="#f6f7f9" stroke="none" stroke-width="1"/>
+<rect x="226" y="68" width="12" height="12" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="226" y1="71.96" x2="238" y2="71.96" stroke="#707782" stroke-width="1"/>
+<line x1="226" y1="75.92" x2="238" y2="75.92" stroke="#707782" stroke-width="1"/>
+<line x1="229.96" y1="68" x2="229.96" y2="80" stroke="#707782" stroke-width="1"/>
+<text x="246" y="80" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">全部门店经营总览</text>
+<rect x="380" y="68" width="3" height="10" rx="0.5" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="385" y="68" width="3" height="13" rx="0.5" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="390" y="68" width="3" height="7" rx="0.5" fill="none" stroke="#707782" stroke-width="1"/>
+<text x="400" y="80" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">区域优秀门店</text>
+<rect x="512" y="70" width="12" height="10" rx="2" fill="none" stroke="#707782" stroke-width="1"/>
+<line x1="512" y1="73" x2="524" y2="73" stroke="#707782" stroke-width="1"/>
+<line x1="515" y1="68" x2="515" y2="72" stroke="#707782" stroke-width="1"/>
+<line x1="521" y1="68" x2="521" y2="72" stroke="#707782" stroke-width="1"/>
+<circle cx="516" cy="76" r="0.65" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="516" cy="79" r="0.65" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="76" r="0.65" fill="#707782" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="79" r="0.65" fill="#707782" stroke="none" stroke-width="1"/>
+<text x="532" y="80" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">日历</text>
+<rect x="599" y="68" width="9" height="3" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="596" y="73" width="9" height="3" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="600" y="78" width="9" height="3" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<text x="616" y="80" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">甘特图</text>
+<rect x="681" y="68" width="5" height="5" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="681" y="75" width="5" height="5" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="688" y="68" width="5" height="5" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<rect x="688" y="75" width="5" height="5" rx="1" fill="none" stroke="#707782" stroke-width="1"/>
+<text x="701" y="80" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">画册</text>
+<rect x="747" y="57" width="79" height="39" rx="6" fill="#ffffff" stroke="none" stroke-width="1"/>
+<rect x="760" y="68" width="10" height="12" rx="1" fill="none" stroke="#245bdb" stroke-width="1"/>
+<line x1="763" y1="72" x2="765" y2="74" stroke="#245bdb" stroke-width="1"/>
+<line x1="765" y1="74" x2="769" y2="70" stroke="#245bdb" stroke-width="1"/>
+<line x1="763" y1="78" x2="769" y2="78" stroke="#245bdb" stroke-width="1"/>
+<text x="779" y="80" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="500">表单</text>
+<line x1="847.0" y1="69" x2="847.0" y2="81" stroke="#707782" stroke-width="1"/>
+<line x1="841" y1="75.0" x2="853" y2="75.0" stroke="#707782" stroke-width="1"/>
+<line x1="204" y1="96" x2="1600" y2="96" stroke="#dfe2e7" stroke-width="1"/>
+<rect x="204" y="96" width="1396" height="41" rx="0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<line x1="204" y1="137" x2="1600" y2="137" stroke="#dfe2e7" stroke-width="1"/>
+<rect x="833" y="101" width="166" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<rect x="917" y="104" width="79" height="22" rx="3" fill="#eef2ff" stroke="none" stroke-width="1"/>
+<text x="843" y="120" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">编辑表单</text>
+<text x="926" y="120" fill="#245bdb" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">填写表单</text>
+<rect x="1490" y="102" width="76" height="26" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="1500" y="120" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">分享表单</text>
+<rect x="204" y="137" width="1396" height="171" rx="0" fill="#e9eef6" stroke="none" stroke-width="1"/>
+<circle cx="274" cy="255" r="15" fill="#d8e2ef" stroke="none" stroke-width="1"/>
+<circle cx="678.6400000000001" cy="192" r="20" fill="#d8e2ef" stroke="none" stroke-width="1"/>
+<circle cx="1181.1999999999998" cy="197" r="21" fill="#d8e2ef" stroke="none" stroke-width="1"/>
+<circle cx="1516.24" cy="218" r="10" fill="#d8e2ef" stroke="none" stroke-width="1"/>
+<rect x="320" y="215" width="75" height="24" rx="12" fill="#d3ddeb" stroke="none" stroke-width="1"/>
+<rect x="846.1600000000001" y="151" width="75" height="24" rx="12" fill="#d3ddeb" stroke="none" stroke-width="1"/>
+<rect x="1320.8" y="232" width="75" height="24" rx="12" fill="#d3ddeb" stroke="none" stroke-width="1"/>
+<rect x="651" y="232" width="494" height="692" rx="9" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="876.0" y="297" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="23" font-weight="650">表单</text>
+<text x="691" y="344" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">门店编号</text>
+<rect x="691" y="357" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="375" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请输入内容</text>
+<text x="691" y="430" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">门店名称</text>
+<rect x="691" y="443" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="461" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请输入内容</text>
+<text x="691" y="516" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">门店类型</text>
+<rect x="691" y="529" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="547" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请选择选项</text>
+<line x1="1088" y1="541" x2="1092" y2="545" stroke="#707782" stroke-width="1"/>
+<line x1="1092" y1="545" x2="1096" y2="541" stroke="#707782" stroke-width="1"/>
+<text x="691" y="602" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">所属区域</text>
+<rect x="691" y="615" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="633" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请选择选项</text>
+<line x1="1088" y1="627" x2="1092" y2="631" stroke="#707782" stroke-width="1"/>
+<line x1="1092" y1="631" x2="1096" y2="627" stroke="#707782" stroke-width="1"/>
+<text x="691" y="688" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">城市</text>
+<rect x="691" y="701" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="719" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请输入内容</text>
+<text x="691" y="774" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">门店负责人</text>
+<rect x="691" y="787" width="414" height="28" rx="4" fill="#ffffff" stroke="#dfe2e7" stroke-width="1"/>
+<text x="699" y="805" fill="#a1a6af" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">请选择人员</text>
+<line x1="1088" y1="799" x2="1092" y2="803" stroke="#707782" stroke-width="1"/>
+<line x1="1092" y1="803" x2="1096" y2="799" stroke="#707782" stroke-width="1"/>
+<text x="691" y="855" fill="#30343b" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">区域经理</text>
+<text x="691" y="877" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="400">字段描述：填写对应的负责人信息。</text>
+<text x="691" y="896" fill="#707782" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="400">信息仅用于业务协作与记录。</text>
+</svg>

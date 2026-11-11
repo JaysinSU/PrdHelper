@@ -103,8 +103,5 @@
 <rect x="21" y="574" width="378" height="44" rx="7" fill="#f6f8fc" stroke="#dbe2ed" stroke-width="1"/>
 <text x="35" y="601" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">文本</text>
 <text x="373" y="602" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="400">›</text>
-<text x="22" y="667" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="550">默认值</text>
-<rect x="21" y="678" width="378" height="44" rx="7" fill="#f6f8fc" stroke="#dbe2ed" stroke-width="1"/>
-<text x="35" y="705" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="400">请输入默认值</text>
 <rect x="150" y="883" width="120" height="5" rx="2" fill="#1d2534" stroke="none" stroke-width="1"/>
 </svg>

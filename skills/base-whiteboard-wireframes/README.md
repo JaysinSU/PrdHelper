@@ -1,6 +1,6 @@
 # Base 飞书画板线稿
 
-从一段需求或 PRD 出发，用内置 Base 底稿绘制关键界面和交互状态，再写入飞书云文档的可编辑画板。底稿是虚构界面，包含可改的 SVG 和可快速预览的 PNG。
+从一段需求或 PRD 出发，用内置 Base 底稿绘制关键界面和交互状态，再写入飞书云文档的可编辑画板。内置 19 套可改的 SVG 与 PNG 预览，其中 12 套桌面场景按参考截图的页面结构、比例和密度重绘，使用虚构业务数据。
 
 ## 交给 AI
 
@@ -13,6 +13,7 @@
 ## 底稿和示例
 
 - [底稿目录](assets/catalog.json)记录每个场景的 SVG、PNG 和可标注区域。
+- [参考核对](references/source-fidelity.md)用于确认页面结构贴合，独立于写入和原生节点检查。
 - [编帧方法](references/storyboarding.md)包含新字段、富内容编辑、Excel 导入、表与视图描述、表单和仪表盘的用法。
 - [飞书画板交付](references/feishu-whiteboard.md)覆盖原生节点转换、指定位置插入、已有画板的局部修改和读回验收。
 
@@ -25,3 +26,7 @@ python3 scripts/verify_native.py ./nodes.json --require-text "搜索字段类型
 ```
 
 技能入口见 [SKILL.md](SKILL.md)。
+
+12 套桌面参考底稿分别是：数据表、看板、日历、甘特、画册、表单编辑态、表单填写态、仪表盘、问卷、问卷关联数据表、工作流、高级权限。桌面尺寸为 1600×924，共享顶部导航和左侧目录；手机模板为 420×900。原模板名 `form`、`app-dashboard` 在拼版配置中仍可使用，分别指向 `form-fill`、`dashboard`。
+
+重建资源可运行 `python3 assets/build_assets.py --render`，需要 Python 3、Node.js 和 whiteboard-cli。截图中的内部路径、头像、客户数据和水印没有打包。
