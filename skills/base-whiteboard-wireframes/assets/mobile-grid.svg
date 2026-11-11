@@ -25,10 +25,10 @@
 <text x="302" y="181" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">筛选     排序</text>
 <line x1="0" y1="200" x2="420" y2="200" stroke="#dbe2ed" stroke-width="1"/>
 <rect x="0" y="201" width="420" height="42" rx="0" fill="#f6f8fc" stroke="none" stroke-width="1"/>
-<line x1="35" y1="202" x2="35" y2="787" stroke="#dbe2ed" stroke-width="1"/>
-<line x1="204" y1="202" x2="204" y2="787" stroke="#dbe2ed" stroke-width="1"/>
-<line x1="284" y1="202" x2="284" y2="787" stroke="#dbe2ed" stroke-width="1"/>
-<line x1="363" y1="202" x2="363" y2="787" stroke="#dbe2ed" stroke-width="1"/>
+<line x1="35" y1="202" x2="35" y2="447" stroke="#dbe2ed" stroke-width="1"/>
+<line x1="204" y1="202" x2="204" y2="447" stroke="#dbe2ed" stroke-width="1"/>
+<line x1="284" y1="202" x2="284" y2="447" stroke="#dbe2ed" stroke-width="1"/>
+<line x1="363" y1="202" x2="363" y2="447" stroke="#dbe2ed" stroke-width="1"/>
 <text x="48" y="228" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600">文本1</text>
 <text x="216" y="228" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600">单选1</text>
 <text x="295" y="228" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600">人员1</text>
@@ -53,36 +53,6 @@
 <text x="220" y="420" fill="#347055" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项3</text>
 <text x="297" y="419" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
 <line x1="0" y1="447" x2="420" y2="447" stroke="#dbe2ed" stroke-width="1"/>
-<text x="12" y="487" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">4</text>
-<text x="48" y="487" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">示例数据</text>
-<rect x="211" y="471" width="65" height="25" rx="5" fill="#e8efff" stroke="none" stroke-width="1"/>
-<text x="220" y="488" fill="#345db2" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项1</text>
-<text x="297" y="487" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
-<line x1="0" y1="515" x2="420" y2="515" stroke="#dbe2ed" stroke-width="1"/>
-<text x="12" y="555" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">5</text>
-<text x="48" y="555" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">示例数据</text>
-<rect x="211" y="539" width="65" height="25" rx="5" fill="#f2edf9" stroke="none" stroke-width="1"/>
-<text x="220" y="556" fill="#70549b" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项2</text>
-<text x="297" y="555" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
-<line x1="0" y1="583" x2="420" y2="583" stroke="#dbe2ed" stroke-width="1"/>
-<text x="12" y="623" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">6</text>
-<text x="48" y="623" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">示例数据</text>
-<rect x="211" y="607" width="65" height="25" rx="5" fill="#e9f5ee" stroke="none" stroke-width="1"/>
-<text x="220" y="624" fill="#347055" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项3</text>
-<text x="297" y="623" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
-<line x1="0" y1="651" x2="420" y2="651" stroke="#dbe2ed" stroke-width="1"/>
-<text x="12" y="691" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">7</text>
-<text x="48" y="691" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">示例数据</text>
-<rect x="211" y="675" width="65" height="25" rx="5" fill="#e8efff" stroke="none" stroke-width="1"/>
-<text x="220" y="692" fill="#345db2" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项1</text>
-<text x="297" y="691" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
-<line x1="0" y1="719" x2="420" y2="719" stroke="#dbe2ed" stroke-width="1"/>
-<text x="12" y="759" fill="#78859a" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="400">8</text>
-<text x="48" y="759" fill="#1d2534" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">示例数据</text>
-<rect x="211" y="743" width="65" height="25" rx="5" fill="#f2edf9" stroke="none" stroke-width="1"/>
-<text x="220" y="760" fill="#70549b" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="550">选项2</text>
-<text x="297" y="759" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="400">示例成员</text>
-<line x1="0" y1="787" x2="420" y2="787" stroke="#dbe2ed" stroke-width="1"/>
 <line x1="0" y1="821" x2="420" y2="821" stroke="#dbe2ed" stroke-width="1"/>
 <text x="25" y="860" fill="#2860de" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600">数据表</text>
 <text x="137" y="860" fill="#526078" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="400">视图</text>

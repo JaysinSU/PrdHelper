@@ -7,7 +7,7 @@ INK, MUTED, FAINT = '#1d2534', '#526078', '#78859a'
 LINE, PANEL, BG, WHITE = '#dbe2ed', '#f6f8fc', '#edf1f7', '#ffffff'
 BLUE, TINT = '#2860de', '#eef3ff'
 WIDTH, HEIGHT = 1440,900
-NAMES = ['示例数据'] * 8
+NAMES = ['示例数据'] * 3
 STATUS = [('选项1', '#e8efff', '#345db2'), ('选项2', '#f2edf9', '#70549b'), ('选项3', '#e9f5ee', '#347055')]
 PEOPLE = ['示例成员'] * 3
 
@@ -82,7 +82,7 @@ def phone_grid(b):
     b.line(0, 200, 420, 200)
     b.rect(0, 201, 420, 42, PANEL)
     for x in (35, 204, 284, 363):
-        b.line(x, 202, x, 787)
+        b.line(x, 202, x, 447)
     for x, label in ((48, '文本1'), (216, '单选1'), (295, '人员1')):
         b.text(x, 228, label, 13, MUTED, 600)
     b.rect(372, 206, 40, 31, TINT, radius=5)
@@ -95,7 +95,7 @@ def phone_grid(b):
         label, fill, ink = STATUS[i % 3]
         b.pill(211, y + 24, label, fill, ink, 65)
         b.text(297, y + 40, PEOPLE[i % 3], 13, MUTED)
-    b.line(0, 787, 420, 787)
+    b.line(0, 447, 420, 447)
     b.line(0, 821, 420, 821)
     b.text(25, 860, '数据表', 14, BLUE, 600)
     b.text(137, 860, '视图', 14, MUTED)
@@ -105,7 +105,7 @@ def phone_grid(b):
     b.anchor('view-tabs', 0, 101, 420, 46)
     b.anchor('table-header', 0, 201, 420, 42)
     b.anchor('field-add', 369, 201, 47, 42)
-    b.anchor('grid-body', 0, 243, 420, 544)
+    b.anchor('grid-body', 0, 243, 420, 204)
     b.anchor('selected-cell', 35, 243, 169, 68)
 
 def mobile_grid():

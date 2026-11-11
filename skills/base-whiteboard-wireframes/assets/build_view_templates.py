@@ -3,16 +3,8 @@
 from base_chrome import (Board, chrome, WIDTH, HEIGHT, SIDEBAR, INK, MUTED,
                          FAINT, LINE, PANEL, BG, WHITE, BLUE, TINT)
 
-GROUPS = [('分组1','#fbefc7'),('分组2','#d9f2ed'),('分组3','#f9e5e5'),('分组4','#eee7fb')]
-EXAMPLE_ROWS = [
-    ('示例数据','示例数据','选项1','分组1','示例数据'),
-    ('示例数据','示例数据','选项1','分组1','示例数据'),
-    ('示例数据','示例数据','选项2','分组2','示例数据'),
-    ('示例数据','示例数据','选项1','分组3','示例数据'),
-    ('示例数据','示例数据','选项2','分组2','示例数据'),
-    ('示例数据','示例数据','选项3','分组4','示例数据'),
-]
-COLS = [204,250,359,513,615,718,820,975,1129,1283,1385,1558,1600]
+GROUPS = [('分组1','#fbefc7'),('分组2','#d9f2ed'),('分组3','#eee7fb')]
+COLS = [204,250,510,710,950,1170,1600]
 
 
 def compact_pill(b,x,y,label,fill=TINT,ink=INK,w=None,h=17,size=11):
@@ -58,62 +50,40 @@ def field_label(b,x,y,label,kind='text',size=11.5):
 
 
 def grid_content(b, selected=False):
-    y0,hh,rh = 128,30,27.4
-    ybottom = y0+hh+21*rh
-    b.rect(SIDEBAR,y0,WIDTH-SIDEBAR,hh,PANEL)
+    # Three representative records are enough for the background table.
+    y0, hh, rh = 128, 30, 32
+    rows = 3
+    ybottom = y0 + hh + rows * rh
+    b.rect(SIDEBAR, y0, WIDTH-SIDEBAR, hh, PANEL)
     for x in COLS:
-        b.line(x,y0,x,ybottom)
-    b.line(SIDEBAR,y0,WIDTH,y0)
-    for i in range(22):
-        b.line(SIDEBAR,y0+hh+i*rh,WIDTH,y0+hh+i*rh)
+        b.line(x, y0, x, ybottom)
+    b.line(SIDEBAR, y0, WIDTH, y0)
+    for i in range(rows+1):
+        b.line(SIDEBAR, y0+hh+i*rh, WIDTH, y0+hh+i*rh)
     b.rect(227,139,11,11,'none',MUTED,1)
-    headers=[('文本1','text'),('文本2','text'),('单选1','choice'),('单选2','choice'),('文本3','text'),('人员1','person'),('人员2','person'),('文本4','text'),('单选3','choice'),('多选1','text'),('日期1','date')]
+    headers = [('文本1','text'),('单选1','choice'),('人员1','person'),('日期1','date'),('文本2','text')]
     for i,(label,kind) in enumerate(headers):
-        # The partial date column at the viewport edge intentionally retains the scroll position.
-        if i==10:
-            field_label(b,COLS[i+1]+2,148,'日期','date',10)
-        else:
-            field_label(b,COLS[i+1]+6,148,label,kind,11.5)
-    for i in range(21):
+        field_label(b,COLS[i+1]+10,148,label,kind,11.5)
+    for i in range(rows):
         y=y0+hh+i*rh
-        b.text(229,y+18,str(i+1),11,FAINT)
-        if i<6:
-            code,name,typ,area,city=EXAMPLE_ROWS[i]
-            b.text(260,y+18,code,11.5,INK)
-            b.text(367,y+18,name,11.5,INK)
-            compact_pill(b,522,y+5,typ,('#e7ebfb' if typ=='选项1' else '#fcebd8' if typ=='选项2' else '#d8f0f5'),w=47)
-            rfill=dict(GROUPS)[area]
-            compact_pill(b,623,y+5,area,rfill,w=64)
-            b.text(726,y+18,city,11.5)
-            for px in (829,984):
-                b.circle(px+8,y+13,8,'#e0e8f0')
-                b.text(px+22,y+18,'示例成员',11.5)
-            compact_pill(b,1291,y+5,'选项1','#fbefc7',w=49)
-            tags=[('选项1','选项2'),('选项1','选项2'),('选项1','选项3'),('选项1','选项2'),('选项1','选项2'),('选项1','选项2')][i]
-            compact_pill(b,1393,y+5,tags[0],'#e6ebfb',w=57 if len(tags[0])==4 else 47)
-            compact_pill(b,1454,y+5,tags[1],'#f8ead9',w=min(88,len(tags[1])*11+12))
-        elif i<18:
-            b.text(260,y+18,'示例数据',11.5,INK)
-            if i==6:
-                b.text(367,y+18,'示例数据…',11.5,INK)
-                compact_pill(b,522,y+5,'选项1','#e7ebfb',w=47)
-        if i==20:
-            compact_pill(b,623,y+5,'分组4','#eee7fb',w=64)
-        if i<18:
-            b.text(1565,y+18,'示例',10.5,MUTED)
-    b.text(225,ybottom+21,'+',19,FAINT)
-    b.line(SIDEBAR,ybottom+28,WIDTH,ybottom+28)
+        b.text(229,y+21,i+1,11,FAINT)
+        b.text(260,y+21,'示例数据',11.5,INK)
+        compact_pill(b,520,y+8,f'选项{i%2+1}',TINT,w=48)
+        b.circle(730,y+16,8,'#e0e8f0')
+        b.text(746,y+21,'示例成员',11.5)
+        b.text(960,y+21,'示例数据',11.5,MUTED)
+        b.text(1180,y+21,'示例数据' if i!=1 else '示例数据…',11.5,MUTED)
+    b.text(225,ybottom+23,'+',19,FAINT)
+    b.line(SIDEBAR,ybottom+32,WIDTH,ybottom+32)
     b.line(SIDEBAR,892,WIDTH,892)
-    b.text(291,909,'21 条记录',10.5,MUTED)
-    b.line(350,904,354,908,MUTED,.8)
-    b.line(354,908,358,904,MUTED,.8)
-    b.rect(205,916,483,5,'#b9bdc3',radius=2)
+    b.text(291,909,'3 条记录',10.5,MUTED)
+    b.line(344,904,348,908,MUTED,.8)
+    b.line(348,908,352,904,MUTED,.8)
     if selected:
-        b.rect(1129,y0+hh,154,rh,'none',BLUE,1)
+        b.rect(1170,y0+hh,430,rh,'none',BLUE,1)
     b.anchor('table-header',204,128,1396,30)
-    b.anchor('grid-body',204,158,1396,575)
-    b.anchor('selected-cell',1129,158,154,27.4)
-    b.anchor('viewport-scrollbar',204,914,1396,9)
+    b.anchor('grid-body',204,158,1396,96)
+    b.anchor('selected-cell',1170,158,430,32)
     b.anchor('toolbar-field-config',321,99,81,25)
 
 
@@ -126,68 +96,31 @@ def desktop_grid():
 
 def kanban():
     b=Board('kanban','看板视图',['分组卡片预览','记录详情入口'],width=1600,height=924)
-    chrome(b,active='看板',tools=[('分组依据 单选2','select'),('卡片配置','table'),('筛选','filter'),('排序','text')])
-    xs=[222,448,674,900]
-    fills=['#fcf8ed','#edf9f7','#fcf3f4','#f7f3fc']
-    for ci,(x,(region,pillfill),fill) in enumerate(zip(xs,GROUPS,fills)):
-        empty=ci==3
-        b.rect(x,130,218,64 if empty else 778,fill,radius=8)
-        compact_pill(b,x+10,138,region,pillfill,w=61)
-        b.text(x+82,151,[2,1,1,0][ci],11,FAINT)
+    chrome(b,active='看板',tools=[('分组依据 单选1','select'),('卡片配置','table'),('筛选','filter'),('排序','text')])
+    xs=[222,502,782]
+    fills=['#fcf8ed','#edf9f7','#f7f3fc']
+    for ci,(x,(group,pillfill),fill) in enumerate(zip(xs,GROUPS,fills)):
+        empty=ci==2
+        b.rect(x,130,262,64 if empty else 300,fill,radius=8)
+        compact_pill(b,x+10,138,group,pillfill,w=61)
+        b.text(x+82,151,0 if empty else 1,11,FAINT)
         if empty:
-            b.text(x+103,180,'+',20,FAINT)
+            b.text(x+125,180,'+',20,FAINT)
             continue
         cardx,cardy=x+7,162
-        b.rect(cardx,cardy,204,714,WHITE,LINE,5)
-        store=EXAMPLE_ROWS[[0,4,3][ci]]
-        code,name,typ,area,city=store
-        b.text(cardx+11,187,code,12,INK,600)
-        field_label(b,cardx+11,220,'文本2：')
-        b.text(cardx+11,244,name,11.5)
-        field_label(b,cardx+11,272,'文本3：')
-        b.text(cardx+11,296,city,11.5)
-        field_label(b,cardx+11,326,'单选1：','choice')
-        compact_pill(b,cardx+80,313,typ,'#e6ebfb' if typ=='选项1' else '#fcebd8',w=45)
-        field_label(b,cardx+11,355,'数字1：','number')
-        b.text(cardx+80,355,'示例数据',11.5)
-        field_label(b,cardx+11,384,'公式1：','formula')
-        b.text(cardx+92,384,'示例数据',11.5)
-        field_label(b,cardx+11,413,'单选3：','choice')
-        compact_pill(b,cardx+80,400,'选项1','#fbefc7',w=48)
-        field_label(b,cardx+11,442,'日期1：','date')
-        b.text(cardx+81,442,'示例数据',11.5)
-        field_label(b,cardx+11,471,'数字2：','number')
-        b.text(cardx+91,471,'示例数据',11.5)
-        field_label(b,cardx+11,500,'数字3：','number')
-        b.text(cardx+81,500,'示例数据',11.5)
-        field_label(b,cardx+11,529,'人员1：','person')
-        b.circle(cardx+101,525,7,'#e0e8f0')
-        b.text(cardx+113,529,'示例成员',11.5)
-        field_label(b,cardx+11,558,'多选1：','text')
-        compact_pill(b,cardx+80,545,['选项1','选项1','选项1'][ci],'#e6ebfb',w=60)
-        compact_pill(b,cardx+144,545,'选项2','#f8ead9',w=52)
-        field_label(b,cardx+11,588,'文本4：')
-        b.text(cardx+11,614,'示例数据…',11.2)
-        b.text(cardx+11,633,'示例数据…',11.2)
-        field_label(b,cardx+11,663,'人员2：','person')
-        b.circle(cardx+101,659,7,'#e0e8f0')
-        b.text(cardx+113,663,'示例成员',11.5)
-        field_label(b,cardx+11,692,'复选框1：','check')
-        b.rect(cardx+123,681,12,12,'#64b66e' if ci!=1 else WHITE,LINE,2)
-        if ci!=1:
-            b.line(cardx+125,687,cardx+128,690,WHITE,1.2)
-            b.line(cardx+128,690,cardx+133,684,WHITE,1.2)
-        field_label(b,cardx+11,721,'关联字段1：','link')
-        b.rect(cardx+11,733,94,16,'#e7e9ec')
-        b.text(cardx+18,745,'示例数据',10.5)
-        field_label(b,cardx+11,779,'修改时间：','date',10.5)
-        b.text(cardx+11,799,'示例数据',10.5,MUTED)
-        field_label(b,cardx+11,827,'创建时间：','date',10.5)
-        b.text(cardx+11,848,'示例数据',10.5,MUTED)
-        b.text(x+104,898,'+',20,FAINT)
-        b.anchor(f'kanban-card-{ci+1}',cardx,cardy,204,714)
-    b.anchor('kanban-groups',222,130,896,778)
-    b.anchor('kanban-target-field',240,574,183,65)
+        b.rect(cardx,cardy,248,226,WHITE,LINE,5)
+        b.text(cardx+11,187,'示例数据',12,INK,600)
+        field_label(b,cardx+11,218,'文本1：')
+        b.text(cardx+11,242,'示例数据',11.5)
+        field_label(b,cardx+11,278,'单选1：','choice')
+        compact_pill(b,cardx+80,265,f'选项{ci+1}',TINT,w=48)
+        field_label(b,cardx+11,314,'文本2：')
+        b.text(cardx+11,340,'示例数据…',11.5,MUTED)
+        b.text(cardx+11,360,'示例数据…',11.5,MUTED)
+        b.text(x+125,419,'+',20,FAINT)
+        b.anchor(f'kanban-card-{ci+1}',cardx,cardy,248,226)
+    b.anchor('kanban-groups',222,130,826,300)
+    b.anchor('kanban-target-field',240,300,220,65)
     return b
 
 
@@ -219,7 +152,7 @@ def calendar():
             b.circle(x+5,y+12,10,BLUE)
             b.text(x-1,y+17,'11',10.5,WHITE,600)
         else:b.text(x,y+17,label,11.5,INK if current else FAINT)
-    events=[(11,0),(11,1),(14,0)]
+    events=[(11,0),(14,0)]
     for idx,slot in events:
         row,col=divmod(idx,7)
         x=SIDEBAR+cw*col+3;y=y0+row*rh+25+slot*21
@@ -235,8 +168,8 @@ def calendar():
 def gantt():
     b=Board('gantt','甘特图视图',['时间轴预览','任务条与记录入口'],width=1600,height=924)
     chrome(b,active='甘特图',tools=[('字段配置','table'),('甘特图配置','gantt'),('筛选','filter'),('分组','gallery'),('排序','text')])
-    split=410
-    b.line(split,128,split,797)
+    split, ybottom = 410, 340
+    b.line(split,128,split,ybottom)
     b.text(389,147,'≪',15,MUTED)
     b.text(420,147,'2026年6月',12,MUTED,550)
     b.text(523,147,'2026年7月',12,MUTED,550)
@@ -254,31 +187,22 @@ def gantt():
     for i,label in enumerate(labels):
         x=split+cw*i
         b.text(x+18,187,str(label),10.5,FAINT)
-        if i%7 in (5,6):b.rect(x,196,cw,601,'#f4f4f5')
-        b.line(x,196,x,797)
+        if i%7 in (5,6):b.rect(x,196,cw,ybottom-196,'#f4f4f5')
+        b.line(x,196,x,ybottom)
     b.line(SIDEBAR,196,WIDTH,196)
-    b.line(SIDEBAR,797,WIDTH,797)
-    rh=27.4
-    for i in range(21):
-        y=196+rh*i
-        b.text(229,y+18,str(i+1),11,FAINT)
-        if i<18:b.text(261,y+18,EXAMPLE_ROWS[i][0] if i<6 else '示例数据',11.5)
-        if i<6:
-            x=split+cw*3
-            b.rect(x+1,y+1,cw-2,25,'#48a95b',radius=5)
-            b.text(x+18,y+18,'1天',11,WHITE)
-            b.text(x+cw+8,y+18,EXAMPLE_ROWS[i][1],11.5)
-        elif i==6:
-            x=split+cw*15
-            b.rect(x+1,y+1,cw-2,25,'#48a95b',radius=5)
-            b.text(x+18,y+18,'1天',11,WHITE)
-        elif i<18:
-            b.rect(1575,y+9,18,16,'#eef0f2',radius=3)
-            b.text(1577,y+21,'→',15,MUTED)
-    b.text(225,789,'+',18,FAINT)
-    b.rect(743,800,88,5,'#b9bdc3',radius=2)
-    b.anchor('gantt-records',204,196,206,575.4)
-    b.anchor('gantt-timeline',410,196,1190,601)
+    b.line(SIDEBAR,ybottom,WIDTH,ybottom)
+    for i,offset in enumerate((3,5,8)):
+        y=196+36*i
+        b.text(229,y+21,i+1,11,FAINT)
+        b.text(261,y+21,'示例数据',11.5)
+        x=split+cw*offset
+        b.rect(x+1,y+1,cw-2,25,'#48a95b',radius=5)
+        b.text(x+18,y+18,'1天',11,WHITE)
+        b.text(x+cw+8,y+18,'示例数据',11.5)
+    b.text(225,331,'+',18,FAINT)
+    b.rect(743,344,88,5,'#b9bdc3',radius=2)
+    b.anchor('gantt-records',204,196,206,108)
+    b.anchor('gantt-timeline',410,196,1190,144)
     b.anchor('gantt-task-bar',566.2,197,49.7,25)
     b.anchor('gantt-header',410,128,1190,68)
     return b
@@ -288,27 +212,17 @@ def gallery():
     b=Board('gallery','画册视图',['多列卡片预览','记录详情入口'],width=1600,height=924)
     chrome(b,active='画册',tools=[('卡片配置','table'),('筛选','filter'),('排序','text')])
     cw,ch,gap=262,216,14
-    for row in range(4):
-        y=130+row*(ch+gap)
-        for col in range(5):
-            x=218+col*(cw+gap)
-            h=min(ch,HEIGHT-y-2)
-            b.rect(x,y,cw,h,WHITE,LINE,7)
-            idx=row*5+col
-            code=EXAMPLE_ROWS[idx][0] if idx<6 else '示例数据'
-            b.text(x+15,y+27,code,13,INK,550)
-            if idx<6:
-                _,name,typ,area,city=EXAMPLE_ROWS[idx]
-                field_label(b,x+15,y+56,'文本2：')
-                b.text(x+15,y+81,name,12)
-                field_label(b,x+15,y+111,'单选2：','choice')
-                compact_pill(b,x+86,y+98,area,dict(GROUPS)[area],w=63)
-                field_label(b,x+15,y+141,'文本3：')
-                b.text(x+15,y+166,city,12)
-            if row==3 and col>=3:
-                b.rect(x+13,y+7,160,28,WHITE)
-                b.text(x+15,y+27,'示例数据',13,FAINT)
-    b.anchor('gallery-grid',218,130,1366,792)
+    for col in range(3):
+        x=218+col*(cw+gap);y=130
+        b.rect(x,y,cw,ch,WHITE,LINE,7)
+        b.text(x+15,y+27,'示例数据',13,INK,550)
+        field_label(b,x+15,y+56,'文本1：')
+        b.text(x+15,y+81,'示例数据',12)
+        field_label(b,x+15,y+111,'单选1：','choice')
+        compact_pill(b,x+86,y+98,f'选项{col%2+1}',TINT,w=63)
+        field_label(b,x+15,y+141,'文本2：')
+        b.text(x+15,y+166,'示例数据…',12,MUTED)
+    b.anchor('gallery-grid',218,130,814,216)
     b.anchor('gallery-card',218,130,262,216)
     b.anchor('gallery-target-field',233,178,232,44)
     return b

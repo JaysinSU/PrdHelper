@@ -108,12 +108,10 @@ def form_card(b, x, y, w=494, editing=False):
         first, step = y+156, 87
     else:
         first, step = y+112, 86
+    # A few questions establish the form; the rest of the card stays quiet.
     fields = [('文本1', '请输入内容', 'text'),
               ('文本2', '请输入内容', 'text'),
-              ('单选1', '请选择选项', 'select'),
-              ('单选2', '请选择选项', 'select'),
-              ('文本3', '请输入内容', 'text'),
-              ('人员1', '请选择人员', 'select')]
+              ('单选1', '请选择选项', 'select')]
     for i,(label, placeholder, kind) in enumerate(fields):
         yy = first+i*step
         if yy+50 > HEIGHT-8:
@@ -134,10 +132,6 @@ def form_card(b, x, y, w=494, editing=False):
         if kind == 'select':
             b.line(innerx+inputw-17, yy+25, innerx+inputw-13, yy+29, MUTED)
             b.line(innerx+inputw-13, yy+29, innerx+inputw-9, yy+25, MUTED)
-    if not editing:
-        b.text(innerx, 855, '人员2', 12, INK)
-        b.text(innerx, 877, '字段描述：示例说明。', 11, MUTED)
-        b.text(innerx, 896, '此处展示字段说明。', 11, MUTED)
     b.anchor('form-card', x, y, w, HEIGHT-y)
     b.anchor('form-title', x+40, y+25, w-80, 55)
     b.anchor('form-first-field', innerx, first-15, inputw, 58)
@@ -248,11 +242,6 @@ def dashboard():
         b.line(cx+9,yy+18,cx+9,yy+29,FAINT,3)
         b.text(cx-35,yy+45,label,10,MUTED)
         b.text(cx-10,yy+64,val,17,INK,600)
-    b.rect(1157,552,404,103,'#f5f6f8',LINE,7)
-    for i,(name,val) in enumerate((('示例数据','40'),('示例数据','20'),('示例数据','10'))):
-        yy=574+34*i
-        b.text(1171,yy,i+4,10,MUTED); b.text(1195,yy,name,10,MUTED)
-        b.text(1536,yy,val,10,MUTED)
     b.rect(224,775,1356,149,WHITE,radius=13)
     b.text(241,806,'明细表',14,INK,600)
     xs=[241,556,633,710,787,864]
@@ -336,8 +325,6 @@ def questionnaire():
         b.rect(357,yy,592,34,'none','#b8c9d3',6)
         b.nodes.append(f'<circle cx="379" cy="{yy+17}" r="6" fill="none" stroke="#94a6b1"/>')
         b.text(393,yy+22,i+1,12,'#7e929e')
-    b.text(329,901,'4→',12,MUTED)
-    b.text(357,902,'文件上传',16,'#526b7b',600)
     # Editable line-art placeholder for the original right-hand decorative vase.
     b.nodes.append('<ellipse cx="1325" cy="808" rx="103" ry="97" fill="#edf3f6" stroke="#dce6ec"/>')
     b.rect(1262,662,126,102,'#edf3f6','#dce6ec',8)

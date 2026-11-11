@@ -22,7 +22,7 @@ def build(render=False,renderer=None):
     for b in ordered:
         b.meta['reference']={'kind':'screenshot-layout-redraw','reference_index':REFERENCE_IDS.index(b.key)+1} if b.key in REFERENCE_IDS else {'kind':'companion-template','scope':'示意模板，具体面板以用户最新参考为准'}
         b.write()
-    catalog={'schema_version':2,'layout_revision':'minimal-background-v3','aliases':{'form':'form-fill','app-dashboard':'dashboard'},'templates':[b.meta for b in ordered]}
+    catalog={'schema_version':2,'layout_revision':'sparse-background-v4','aliases':{'form':'form-fill','app-dashboard':'dashboard'},'templates':[b.meta for b in ordered]}
     (HERE/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     for name in ('form.svg','form.png','app-dashboard.svg','app-dashboard.png'):
         (HERE/name).unlink(missing_ok=True)

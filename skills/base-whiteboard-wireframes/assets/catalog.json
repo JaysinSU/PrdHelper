@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "layout_revision": "minimal-background-v3",
+  "layout_revision": "sparse-background-v4",
   "aliases": {
     "form": "form-fill",
     "app-dashboard": "dashboard"
@@ -65,19 +65,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         }
       },
       "reference": {
@@ -130,31 +124,25 @@
         "kanban-card-1": {
           "x": 229,
           "y": 162,
-          "width": 204,
-          "height": 714
+          "width": 248,
+          "height": 226
         },
         "kanban-card-2": {
-          "x": 455,
+          "x": 509,
           "y": 162,
-          "width": 204,
-          "height": 714
-        },
-        "kanban-card-3": {
-          "x": 681,
-          "y": 162,
-          "width": 204,
-          "height": 714
+          "width": 248,
+          "height": 226
         },
         "kanban-groups": {
           "x": 222,
           "y": 130,
-          "width": 896,
-          "height": 778
+          "width": 826,
+          "height": 300
         },
         "kanban-target-field": {
           "x": 240,
-          "y": 574,
-          "width": 183,
+          "y": 300,
+          "width": 220,
           "height": 65
         }
       },
@@ -281,13 +269,13 @@
           "x": 204,
           "y": 196,
           "width": 206,
-          "height": 575.4
+          "height": 108
         },
         "gantt-timeline": {
           "x": 410,
           "y": 196,
           "width": 1190,
-          "height": 601
+          "height": 144
         },
         "gantt-task-bar": {
           "x": 566.2,
@@ -352,8 +340,8 @@
         "gallery-grid": {
           "x": 218,
           "y": 130,
-          "width": 1366,
-          "height": 792
+          "width": 814,
+          "height": 216
         },
         "gallery-card": {
           "x": 218,
@@ -871,7 +859,7 @@
           "x": 374,
           "y": 226,
           "width": 232,
-          "height": 624
+          "height": 180
         },
         "permission-options": {
           "x": 626,
@@ -949,19 +937,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         },
         "field-config": {
           "x": 580,
@@ -1062,19 +1044,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         },
         "field-config": {
           "x": 580,
@@ -1164,19 +1140,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         },
         "detail-panel": {
           "x": 870,
@@ -1260,19 +1230,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         },
         "editor-modal": {
           "x": 400,
@@ -1362,19 +1326,13 @@
           "x": 204,
           "y": 158,
           "width": 1396,
-          "height": 575
+          "height": 96
         },
         "selected-cell": {
-          "x": 1129,
+          "x": 1170,
           "y": 158,
-          "width": 154,
-          "height": 27.4
-        },
-        "viewport-scrollbar": {
-          "x": 204,
-          "y": 914,
-          "width": 1396,
-          "height": 9
+          "width": 430,
+          "height": 32
         },
         "import-modal": {
           "x": 310,
@@ -1447,7 +1405,7 @@
           "x": 0,
           "y": 243,
           "width": 420,
-          "height": 544
+          "height": 204
         },
         "selected-cell": {
           "x": 35,
@@ -1502,7 +1460,7 @@
           "x": 0,
           "y": 243,
           "width": 420,
-          "height": 544
+          "height": 204
         },
         "selected-cell": {
           "x": 35,

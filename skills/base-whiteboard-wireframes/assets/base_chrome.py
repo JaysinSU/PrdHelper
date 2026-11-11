@@ -93,7 +93,7 @@ class Board:
         svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.width}" height="{self.height}" viewBox="0 0 {self.width} {self.height}">\n'+ '\n'.join(self.nodes)+'\n</svg>\n'
         (HERE/self.meta['svg']).write_text(svg,encoding='utf-8')
 
-NAV=[('table','数据表1'),('table','数据表2'),('table','数据表3'),('table','数据表4'),('table','数据表5'),('chart','仪表盘1'),('form','收集表1'),('form','收集表2'),('table','数据表6'),('form','收集表3'),('search','查询页1'),('table','数据表7'),('workflow','工作流1'),('chart','仪表盘2'),('form','收集表4'),('form','文档1'),('form','收集表5'),('form','页面1'),('table','数据表8'),('chart','仪表盘3'),('table','数据表9'),('table','数据表10')]
+NAV=[('table','数据表1'),('table','数据表2'),('form','收集表1'),('form','收集表2'),('chart','仪表盘1'),('workflow','工作流1'),('search','查询页1'),('form','文档1')]
 
 def chrome(b,active='表格',mode='views',selected='数据表1',toolbar=True,tools=None):
     b.rect(0,0,WIDTH,56,WHITE)

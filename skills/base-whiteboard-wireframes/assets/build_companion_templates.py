@@ -69,7 +69,7 @@ def record_detail():
     b.text(898,148,'示例数据',23,INK,600)
     b.text(898,186,'详情',13,BLUE);b.text(953,186,'活动',13,MUTED)
     b.line(898,197,1572,197);b.line(898,197,926,197,BLUE,2)
-    for i,(label,value) in enumerate((('文本1','示例数据'),('单选1','选项1'),('单选2','选项1'),('文本3','示例数据'),('人员1','示例成员'))):
+    for i,(label,value) in enumerate((('文本1','示例数据'),('单选1','选项1'),('人员1','示例成员'))):
         y=236+i*48;b.text(900,y,label,12,MUTED);b.text(1092,y,value,13)
     b.text(900,486,'富文本1',12,MUTED)
     b.rect(1080,467,486,255,WHITE,LINE,5)
@@ -119,10 +119,10 @@ def excel_import_map():
     b.rect(337,300,926,328,WHITE,LINE,5);b.rect(338,301,924,39,PANEL)
     for x,label in ((354,'Excel 列'),(651,'示例值'),(953,'Base 字段')):b.text(x,325,label,12,MUTED)
     for x in (633,934):b.line(x,300,x,628)
-    for i,(label,value) in enumerate((('文本1','示例数据'),('文本2','示例数据'),('单选2','选项1'),('文本3','示例数据'))):
+    for i,(label,value) in enumerate((('文本1','示例数据'),('文本2','示例数据'),('单选2','选项1'))):
         y=340+i*72;b.line(337,y,1263,y);b.text(354,y+43,label,13);b.text(651,y+43,value,13)
         b.rect(951,y+18,291,36,WHITE,LINE,4);b.text(964,y+42,label,13);b.icon('chevron',1221,y+29)
-    b.text(337,663,'当前匹配 4 列，可在确认导入前检查字段和记录预览。',12,MUTED)
+    b.text(337,663,'当前匹配 3 列，可在确认导入前检查字段和记录预览。',12,MUTED)
     b.line(310,719,1290,719);b.button(337,743,'上一步',False,82);b.button(1083,743,'取消',False,72);b.button(1167,743,'下一步',True,96)
     b.anchor('import-modal',310,139,980,651);b.anchor('import-mapping',337,300,926,328)
     b.anchor('mapping-target',951,358,291,36);b.anchor('import-actions',1076,738,187,41)

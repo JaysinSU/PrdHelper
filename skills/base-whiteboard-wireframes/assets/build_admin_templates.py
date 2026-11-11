@@ -188,15 +188,15 @@ def advanced_permissions():
     b.text(404, 244, '搜索数据表', 13, FAINT)
     chevron(b, 388, 284)
     b.text(405, 289, '文件夹', 13, INK)
-    table_names = [f'数据表{i}' for i in range(1, 17)]
+    table_names = [f'数据表{i}' for i in range(1, 4)]
     for i, label in enumerate(table_names):
         y = 318 + 34 * i
-        nested = i < 10
+        nested = True
         if i == 0:
             b.rect(374, y - 15, 232, 31, '#e7eeff', radius=6)
         table_icon(b, 400 if nested else 382, y - 7)
         b.text(417 if nested else 399, y + 3, label, 12.5, INK)
-        level = '可管理' if i == 3 else '可编辑' if i == 11 else '无权限'
+        level = ('无权限', '可编辑', '可管理')[i]
         b.text(565, y + 3, level, 10.5, FAINT)
     # Right permission card matches the read/manage/edit/no-access radio stack.
     b.rect(626, 226, 829, 168, WHITE, '#e4e7ec', 7)
@@ -219,7 +219,7 @@ def advanced_permissions():
     b.anchor('permission-toggle', 256, 60, 34, 18)
     b.anchor('permission-roles', 145, 112, 188, 321)
     b.anchor('permission-tabs', 374, 173, 424, 33)
-    b.anchor('permission-table-list', 374, 226, 232, 624)
+    b.anchor('permission-table-list', 374, 226, 232, 180)
     b.anchor('permission-options', 626, 226, 829, 168)
     b.anchor('permission-save', 1296, 877, 159, 28)
     return b
